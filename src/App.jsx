@@ -10,9 +10,8 @@ import Contact from './components/Contact/Contact';
 import './App.css';
 
 function App() {
-  // Use different basename for development vs production
-  const isProduction = import.meta.env.PROD;
-  const basename = isProduction ? '/hpbrightac' : '';
+  // For custom domain, no basename needed
+  const basename = '';
   
   return (
     <Router basename={basename}>
