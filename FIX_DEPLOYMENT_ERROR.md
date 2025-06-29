@@ -83,6 +83,164 @@ jobs:
         publish_dir: ./dist
 ```
 
+## Custom Domain Setup (Map Your Existing Domain)
+
+If you want to use your existing domain name instead of `yourusername.github.io/hpbrightac/`, follow these steps:
+
+### Step 1: Add CNAME File
+
+Create a CNAME file in your `public` folder:
+
+```bash
+# In your project directory
+echo "yourdomain.com" > public/CNAME
+```
+
+Replace `yourdomain.com` with your actual domain (e.g., `hpbrightacademy.com`)
+
+### Step 2: Update Vite Configuration
+
+Update your `vite.config.js` for custom domain:
+
+```javascript
+export default defineConfig({
+  plugins: [react()],
+  base: '/', // Change from '/hpbrightac/' to '/' for custom domain
+  server: {
+    allowedHosts: true
+  },
+  build: {
+    outDir: 'dist',
+  },
+})
+```
+
+### Step 3: Update Router Configuration
+
+Update your `App.jsx`:
+
+```javascript
+function App() {
+  const basename = ''; // Remove basename for custom domain
+  
+  return (
+    <Router basename={basename}>
+      // ...rest of your code
+    </Router>
+  );
+}
+```
+
+### Step 4: Configure DNS Settings
+
+In your domain provider's control panel, add these DNS records:
+
+#### For Root Domain (e.g., hpbrightacademy.com):
+```
+Type: A
+Name: @ (or leave blank)
+Value: 185.199.108.153
+```
+```
+Type: A
+Name: @ (or leave blank)
+Value: 185.199.109.153
+```
+```
+Type: A
+Name: @ (or leave blank)
+Value: 185.199.110.153
+```
+```
+Type: A
+Name: @ (or leave blank)
+Value: 185.199.111.153
+```
+
+#### For Subdomain (e.g., www.hpbrightacademy.com):
+```
+Type: CNAME
+Name: www
+Value: yourusername.github.io
+```
+
+### Step 5: Configure GitHub Pages
+
+1. Go to your repository **Settings** → **Pages**
+2. **Under "Custom domain"**: Enter your domain (e.g., `hpbrightacademy.com`)
+3. ✅ Check **"Enforce HTTPS"** (recommended)
+4. Click **"Save"**
+
+### Step 6: Deploy with Custom Domain
+
+```bash
+# Commit the CNAME file and updated configs
+git add .
+git commit -m "Add custom domain configuration"
+git push origin main
+```
+
+### Step 7: Wait for DNS Propagation
+
+- DNS changes can take **15 minutes to 48 hours** to fully propagate
+- Use [DNS Checker](https://dnschecker.org) to verify propagation
+- GitHub will automatically issue an SSL certificate for HTTPS
+
+## Domain Provider Examples
+
+### GoDaddy:
+1. Go to **DNS Management**
+2. Add A records pointing to GitHub's IPs
+3. Add CNAME record for www
+
+### Namecheap:
+1. Go to **Advanced DNS**
+2. Add A records and CNAME as shown above
+
+### Cloudflare:
+1. Go to **DNS** tab
+2. Add A and CNAME records
+3. Set proxy status to "DNS only" initially
+
+## Expected Results
+
+After setup:
+- **Your domain**: `https://yourdomain.com`
+- **With www**: `https://www.yourdomain.com`
+- **Auto redirect**: Both will work and redirect to HTTPS
+
+## Troubleshooting Custom Domain
+
+### Common Issues:
+1. **404 Error**: Wait for DNS propagation (up to 48 hours)
+2. **SSL Certificate Error**: GitHub needs time to issue certificate
+3. **CNAME file missing**: Make sure it's in the `public` folder
+4. **DNS not pointing**: Verify A records point to GitHub's IPs
+
+### Verify Setup:
+```bash
+# Check if domain points to GitHub
+nslookup yourdomain.com
+
+# Should show GitHub's IP addresses
+```
+
+## Alternative: Subdomain Setup
+
+If you want to use a subdomain like `school.yourdomain.com`:
+
+1. **CNAME file content**: `school.yourdomain.com`
+2. **DNS record**:
+   ```
+   Type: CNAME
+   Name: school
+   Value: yourusername.github.io
+   ```
+
+---
+
+**Note**: Using a custom domain is optional. Your site will work perfectly fine with the GitHub subdomain `yourusername.github.io/hpbrightac/` if you prefer not to use a custom domain.
+
 ## Expected Result
 
 After successful deployment, your site will be available at:
