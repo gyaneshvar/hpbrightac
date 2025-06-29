@@ -10,7 +10,9 @@ import Contact from './components/Contact/Contact';
 import './App.css';
 
 function App() {
-  const basename = process.env.NODE_ENV === 'production' ? '/hpbrightac' : '';
+  // Use different basename for development vs production
+  const isProduction = import.meta.env.PROD;
+  const basename = isProduction ? '/hpbrightac' : '';
   
   return (
     <Router basename={basename}>
