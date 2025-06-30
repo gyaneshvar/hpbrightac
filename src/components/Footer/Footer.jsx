@@ -57,33 +57,14 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                target="_blank"
+                  href="https://www.facebook.com/hpbrightacademy/" 
                   className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FaFacebookF size={16} />
                 </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter size={16} />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors duration-200"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram size={16} />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-200"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube size={16} />
-                </a>
+                
               </div>
             </div>
 
