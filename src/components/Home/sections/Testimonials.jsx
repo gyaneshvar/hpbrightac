@@ -11,49 +11,41 @@ const Testimonials = () => {
       name: 'Mrs. Priya Sharma',
       role: 'Parent of Aarav (Class 5)',
       content: 'H.P. Bright Academy has been a wonderful choice for our son Aarav. The teachers are incredibly caring and dedicated. The individual attention my child receives has helped him grow both academically and personally. The school truly feels like a second home.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c830e24b?q=80&w=150&auto=format&fit=crop'
-    },
+      rating: 5    },
     {
       id: 2,
       name: 'Mr. Rajesh Kumar',
       role: 'Parent of Ananya (Class 7)',
       content: 'The holistic approach to education at H.P. Bright Academy is commendable. My daughter has not only excelled in academics but also developed confidence in various co-curricular activities. The faculty is experienced and truly cares about each child\'s development.',
-      rating: 5,
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop'
-    },
+      rating: 5    },
     {
       id: 3,
       name: 'Mrs. Sunita Gupta',
       role: 'Parent of Krish (Preschool)',
       content: 'As a working mother, I was concerned about sending my 4-year-old to school. But H.P. Bright Academy has exceeded all my expectations. The nurturing environment and play-based learning approach has made my son excited about going to school every day.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop'
-    },
+         },
     {
       id: 4,
       name: 'Mr. Vikram Singh',
       role: 'Parent of Ishika (Class 6)',
       content: 'The modern facilities and technology integration at H.P. Bright Academy is impressive. My daughter enjoys the interactive learning sessions, and the small class sizes ensure she gets the attention she needs. The school has created a perfect balance between academics and values.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop'
-    },
+          },
     {
       id: 5,
       name: 'Mrs. Kavita Mishra',
       role: 'Parent of Arjun (Class 8)',
       content: 'H.P. Bright Academy has prepared my son well for his transition to high school. The focus on character building and moral values alongside academic excellence is what sets this school apart. The teachers have been like mentors to our child.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop'
-    },
+         },
     {
       id: 6,
       name: 'Aditya Verma',
       role: 'Student (Class 8)',
       content: 'I have been studying at H.P. Bright Academy for 5 years now, and it has been an amazing journey. The teachers make learning fun and interesting. I have made great friends and participated in many activities that have helped me grow as a person.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=150&auto=format&fit=crop'
-    }
+         }
   ];
 
   useEffect(() => {

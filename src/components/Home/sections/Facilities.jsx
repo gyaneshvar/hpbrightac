@@ -21,73 +21,73 @@ const Facilities = () => {
       icon: FaChalkboardTeacher,
       title: 'Smart Classrooms',
       description: 'Interactive whiteboards and digital learning tools for enhanced education experience.',
-      image: import.meta.env.BASE_URL + 'images/activities-3.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/4.jpg'
     },
     {
       icon: FaBook,
       title: 'Well-Stocked Library',
       description: 'Extensive collection of books, magazines, and digital resources for all age groups.',
-      image: import.meta.env.BASE_URL + 'images/campus-2.jpg'
+      image: import.meta.env.BASE_URL + 'images/Campus/1.jpg'
     },
     {
       icon: FaDesktop,
       title: 'Computer Laboratory',
       description: 'Modern computers with latest software for technology education and digital literacy.',
-      image: import.meta.env.BASE_URL + 'images/achievements-1.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/3.jpg'
     },
     {
       icon: FaFlask,
       title: 'Science Laboratory',
       description: 'Fully equipped labs for hands-on experiments and scientific exploration.',
-      image: import.meta.env.BASE_URL + 'images/activities-4.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/5.jpg'
     },
     {
       icon: FaFootballBall,
       title: 'Sports Playground',
       description: 'Large playground with facilities for various sports and physical activities.',
-      image: import.meta.env.BASE_URL + 'images/events-2.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/6.jpg'
     },
     {
       icon: FaBus,
       title: 'Safe Transportation',
       description: 'GPS-tracked buses with trained drivers and attendants for student safety.',
-      image: import.meta.env.BASE_URL + 'images/activities-5.jpg'
+      image: import.meta.env.BASE_URL + 'images/Campus/2.jpg'
     },
     {
       icon: FaMusic,
       title: 'Music Room',
       description: 'Dedicated space for music education with various instruments and sound equipment.',
-      image: import.meta.env.BASE_URL + 'images/activities-6.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/2.jpg'
     },
     {
       icon: FaPalette,
       title: 'Art Studio',
       description: 'Creative space for arts and crafts activities to nurture artistic talents.',
-      image: import.meta.env.BASE_URL + 'images/achievements-2.jpg'
+      image: import.meta.env.BASE_URL + 'images/Activities/1.jpg'
     },
     {
       icon: FaWifi,
       title: 'High-Speed Wi-Fi',
       description: 'Campus-wide internet connectivity for digital learning and research.',
-      image: import.meta.env.BASE_URL + 'images/events-1.jpg'
+      image: import.meta.env.BASE_URL + 'images/Events/1.jpg'
     },
     {
       icon: FaCamera,
       title: 'CCTV Security',
       description: '24/7 surveillance system ensuring complete safety and security of students.',
-      image: import.meta.env.BASE_URL + 'images/activities-1.jpg'
+      image: import.meta.env.BASE_URL + 'images/Achievements/1.jpg'
     },
     {
       icon: FaHeart,
       title: 'Medical Room',
       description: 'First aid facility with trained staff for immediate medical attention.',
-      image: import.meta.env.BASE_URL + 'images/activities-2.jpg'
+      image: import.meta.env.BASE_URL + 'images/Achievements/2.jpg'
     },
     {
       icon: FaShieldAlt,
       title: 'Secure Campus',
       description: 'Gated campus with security personnel and controlled access for safety.',
-      image: import.meta.env.BASE_URL + 'images/campus-1.jpg'
+      image: import.meta.env.BASE_URL + 'images/Events/2.jpg'
     }
   ];
 

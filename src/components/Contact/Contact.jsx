@@ -34,8 +34,8 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: 'Email Address',
-      details: 'info@hpbrightacademy.edu.in',
-      link: 'mailto:info@hpbrightacademy.edu.in',
+      details: 'info@hpbrightacademy.in',
+      link: 'mailto:info@hpbrightacademy.in',
       description: 'Send us your queries anytime'
     },
     {

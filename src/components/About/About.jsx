@@ -15,57 +15,33 @@ import {
 const About = () => {
   const navigate = useNavigate();
   const milestones = [
-    { year: '2008', event: 'H.P. Bright Academy Founded' },
-    { year: '2010', event: 'First Graduating Class of 50 Students' },
-    { year: '2012', event: 'Expanded to Include Middle School' },
-    { year: '2015', event: 'Introduced Smart Classroom Technology' },
-    { year: '2018', event: 'Achieved Excellence in State Education Awards' },
-    { year: '2020', event: 'Successfully Transitioned to Hybrid Learning' },
-    { year: '2023', event: 'Celebrated 15 Years of Educational Excellence' }
+    { year: '2019', event: 'H.P. Bright Academy Founded' },
+    { year: '2020', event: 'First Graduating Class of 50 Students' },
+    { year: '2021', event: 'Expanded to Include Middle School' },
+    { year: '2022', event: 'Introduced Smart Classroom Technology' },
+    { year: '2023', event: 'Achieved Excellence in State Education Awards' },
+    { year: '2024', event: 'Successfully Transitioned to Hybrid Learning' },
+    { year: '2025', event: 'Celebrated 5 Years of Educational Excellence' }
   ];
 
   const faculty = [
     {
-      name: 'Mr. Ravi Kumar',
+      name: 'Mrs. Pooja Verma',
       position: 'Principal',
-      qualification: 'M.Ed, B.Ed',
-      experience: '20+ years',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop'
-    },
-    {
-      name: 'Mrs. Sunita Sharma',
-      position: 'Vice Principal & Head of Academics',
-      qualification: 'M.A, B.Ed',
-      experience: '18+ years',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616c830e24b?q=80&w=300&auto=format&fit=crop'
-    },
-    {
-      name: 'Mr. Anil Gupta',
-      position: 'Head of Science Department',
-      qualification: 'M.Sc, B.Ed',
-      experience: '15+ years',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&auto=format&fit=crop'
-    },
-    {
-      name: 'Mrs. Priya Singh',
-      position: 'Head of Primary Section',
-      qualification: 'M.A, B.Ed',
       experience: '12+ years',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format&fit=crop'
+      image: '/images/AboutUs/principal.png'
     },
     {
-      name: 'Mr. Rajesh Verma',
-      position: 'Sports & Physical Education',
-      qualification: 'M.P.Ed',
-      experience: '14+ years',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&auto=format&fit=crop'
+      name: 'Mr. Ravi Prakash Singh',
+      position: 'Co-Founder & Head of Academics',
+      experience: '15+ years',
+      image: '/images/AboutUs/coordinator.png'
     },
     {
-      name: 'Mrs. Kavita Mishra',
-      position: 'Art & Music Teacher',
-      qualification: 'M.A Fine Arts',
-      experience: '10+ years',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop'
+      name: 'Mr. Shambhu Narayan',
+      position: 'Chairman',
+      experience: '35+ years',
+      image: '/images/AboutUs/chairman.jpg?q=80&w=300&auto=format&fit=crop'
     }
   ];
 
@@ -74,7 +50,7 @@ const About = () => {
     'Excellence in Value-Based Learning - 2022',
     'Outstanding Academic Performance - 2021',
     'Best Safety Standards Award - 2020',
-    'Innovation in Teaching Methods - 2019'
+    'Innovation in Teaching Methods - 2024'
   ];
 
   return (

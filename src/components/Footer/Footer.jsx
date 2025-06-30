@@ -144,10 +144,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <FaEnvelope className="text-primary-400" />
                   <a 
-                    href="mailto:info@hpbrightacademy.edu.in" 
+                    href="mailto:info@hpbrightacademy.in" 
                     className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
                   >
-                    info@hpbrightacademy.edu.in
+                    info@hpbrightacademy.in
                   </a>
                 </div>
                 <div className="pt-4">

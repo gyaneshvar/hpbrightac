@@ -9,7 +9,7 @@ A modern, responsive React.js website for H.P. Bright Academy - a school providi
 - **Education Level**: Preschool to Class 8
 - **Address**: Chamao Shivpur Tarna, Ganeshpur, Varanasi, Uttar Pradesh 221105
 - **Contact**: +91 8400308200
-- **Email**: info@hpbrightacademy.edu.in
+- **Email**: info@hpbrightacademy.in
 
 ## 🚀 Features
 
@@ -234,7 +234,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 For support and queries:
-- **Email**: info@hpbrightacademy.edu.in
+- **Email**: info@hpbrightacademy.in
 - **Phone**: +91 8400308200
 - **WhatsApp**: +91 8400308200
 

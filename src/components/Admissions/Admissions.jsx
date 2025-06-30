@@ -537,7 +537,7 @@ const Admissions = () => {
               <span>Call: +91 8400308200</span>
             </a>
             <a
-              href="mailto:info@hpbrightacademy.edu.in"
+              href="mailto:info@hpbrightacademy.in"
               className="btn-secondary inline-flex items-center space-x-2"
             >
               <FaEnvelope />

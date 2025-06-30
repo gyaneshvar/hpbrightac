@@ -4,9 +4,9 @@ import { FaAward, FaUsers, FaGraduationCap, FaHeart } from 'react-icons/fa';
 
 const About = () => {
   const stats = [
-    { icon: FaAward, number: '15+', label: 'Years of Excellence' },
+    { icon: FaAward, number: '5+', label: 'Years of Excellence' },
     { icon: FaUsers, number: '500+', label: 'Happy Students' },
-    { icon: FaGraduationCap, number: '25+', label: 'Experienced Faculty' },
+    { icon: FaGraduationCap, number: '15+', label: 'Experienced Faculty' },
     { icon: FaHeart, number: '100%', label: 'Care & Dedication' },
   ];
 
@@ -79,7 +79,7 @@ const About = () => {
             {/* School Image */}
             <div className="relative">
               <img
-                src={import.meta.env.BASE_URL + "images/activities-1.jpg"}
+                src={import.meta.env.BASE_URL + "images/Activities/6.jpg"}
                 alt="H.P. Bright Academy Campus"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
@@ -125,8 +125,8 @@ const About = () => {
             </h3>
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <img
-                src={import.meta.env.BASE_URL + "images/activities-2.jpg"}
-                alt="Principal - Mr. Ravi Kumar"
+                src={import.meta.env.BASE_URL + "images/AboutUs/principal.png"}
+                alt="Principal - Mrs. Pooja Verma"
                 className="w-32 h-32 rounded-full object-cover shadow-lg"
               />
               <div className="flex-1 text-left">
@@ -137,7 +137,7 @@ const About = () => {
                   potential and develop into confident, caring, and capable individuals."
                 </p>
                 <div>
-                  <div className="font-semibold text-blue-800">Mr. Ravi Kumar</div>
+                  <div className="font-semibold text-blue-800">Mrs. Pooja Verma</div>
                   <div className="text-gray-600">Principal, H.P. Bright Academy</div>
                 </div>
               </div>

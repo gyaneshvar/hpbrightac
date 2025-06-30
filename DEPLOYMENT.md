@@ -124,8 +124,8 @@ The deployed website includes:
 **H.P. Bright Academy**
 - Address: Chamao Shivpur Tarna, Ganeshpur, Varanasi, UP 221105
 - Phone: +91 8400308200
-- Email: info@hpbrightacademy.edu.in
-- Principal: Mr. Ravi Kumar
+- Email: info@hpbrightacademy.in
+- Principal: Mrs. Pooja Verma
 
 ---
 

@@ -43,7 +43,7 @@ const Header = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-xs" />
-                <span>info@hpbrightacademy.edu.in</span>
+                <span>info@hpbrightacademy.in</span>
               </div>
             </div>
             <div className="text-sm">
@@ -155,7 +155,7 @@ const Header = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                       <FaEnvelope className="text-xs" />
-                      <span>info@hpbrightacademy.edu.in</span>
+                      <span>info@hpbrightacademy.in</span>
                     </div>
                   </div>
                 </nav>
