@@ -1,0 +1,21 @@
+{
+  "name": "H.P. Bright Academy",
+  "short_name": "HP Bright Academy",
+  "description": "Quality education from Preschool to Class 8 in Varanasi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/Logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
