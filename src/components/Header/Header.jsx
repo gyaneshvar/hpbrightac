@@ -20,6 +20,8 @@ const Header = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    // Scroll to top when route changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
 
   const navItems = [
@@ -29,6 +31,12 @@ const Header = () => {
     { path: '/admissions', label: 'Admissions' },
     { path: '/contact', label: 'Contact' },
   ];
+
+  const handleNavClick = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
@@ -64,7 +72,7 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between">
             {/* Logo and School Name */}
-            <Link to="/" className="flex items-center space-x-3">
+            <button onClick={() => handleNavClick('/')} className="flex items-center space-x-3">
               <div className="w-12 h-12 lg:w-16 lg:h-16">
                 <img 
                   src={import.meta.env.BASE_URL + "images/Logo.png"} 
@@ -80,14 +88,14 @@ const Header = () => {
                   Preschool to Class 8
                 </p>
               </div>
-            </Link>
+            </button>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.path}
-                  to={item.path}
+                  onClick={() => handleNavClick(item.path)}
                   className={`font-medium transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'text-blue-600 border-b-2 border-blue-600'
@@ -95,10 +103,10 @@ const Header = () => {
                   } py-2`}
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
               <button 
-                onClick={() => navigate('/admissions')}
+                onClick={() => handleNavClick('/admissions')}
                 className="btn-primary"
               >
                 Admissions Open
@@ -128,21 +136,21 @@ const Header = () => {
               <div className="container-custom py-4">
                 <nav className="flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <Link
+                    <button
                       key={item.path}
-                      to={item.path}
-                      className={`font-medium transition-colors duration-200 py-2 px-4 rounded-md ${
+                      onClick={() => handleNavClick(item.path)}
+                      className={`font-medium transition-colors duration-200 py-2 px-4 rounded-md text-left ${
                         location.pathname === item.path
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }`}
                     >
                       {item.label}
-                    </Link>
+                    </button>
                   ))}
                   <div className="pt-4 border-t border-gray-200">
                     <button 
-                      onClick={() => navigate('/admissions')}
+                      onClick={() => handleNavClick('/admissions')}
                       className="btn-primary w-full"
                     >
                       Admissions Open

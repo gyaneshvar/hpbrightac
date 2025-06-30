@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Academics from './components/Academics/Academics';
 import Admissions from './components/Admissions/Admissions';
 import Contact from './components/Contact/Contact';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   
   return (
     <Router basename={basename}>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <main>
