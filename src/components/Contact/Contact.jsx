@@ -312,7 +312,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold mb-6">Visit Our Campus</h3>
                 <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.1756832469843!2d82.9739!3d25.2897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febdf4f%3A0x4a93da95b0bd18db!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.238659194116!2d82.92486!3d25.363316700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2d5e68795ded%3A0x8ede4d0113bbdc36!2sH%20P%20BRIGHT%20ACADEMY%20PASCHIMPUR%20SHIVPUR%20VARANASI!5e0!3m2!1sen!2sin!4v1751262397479!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0, borderRadius: '0.5rem' }}
