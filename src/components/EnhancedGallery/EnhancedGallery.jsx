@@ -33,7 +33,7 @@ const EnhancedGallery = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="gallery" className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -42,7 +42,7 @@ const EnhancedGallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
             School Gallery
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

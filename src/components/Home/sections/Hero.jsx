@@ -30,10 +30,16 @@ const Hero = () => {
   };
 
   const handleVirtualTourClick = () => {
-    // For now, scroll to gallery section. Later can be replaced with actual virtual tour
+    // First try to find the gallery section
     const gallerySection = document.getElementById('gallery');
     if (gallerySection) {
-      gallerySection.scrollIntoView({ behavior: 'smooth' });
+      gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Fallback: scroll to a reasonable position if gallery not found
+      window.scrollTo({ 
+        top: window.innerHeight * 2, 
+        behavior: 'smooth' 
+      });
     }
   };
 
