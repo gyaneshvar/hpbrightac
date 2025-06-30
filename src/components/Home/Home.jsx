@@ -4,7 +4,7 @@ import About from './sections/About';
 import Academics from './sections/Academics';
 import WhyChooseUs from './sections/WhyChooseUs';
 import Facilities from './sections/Facilities';
-import Gallery from './sections/Gallery';
+import EnhancedGallery from '../EnhancedGallery/EnhancedGallery';
 import Testimonials from './sections/Testimonials';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
       <Academics />
       <WhyChooseUs />
       <Facilities />
-      <Gallery />
+      <EnhancedGallery />
       <Testimonials />
     </div>
   );
