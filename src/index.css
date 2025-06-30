@@ -16,14 +16,17 @@
 @layer components {
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    font-family: 'Oswald', sans-serif;
   }
   
   .btn-secondary {
     @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+    font-family: 'Oswald', sans-serif;
   }
   
   .btn-outline {
     @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    font-family: 'Oswald', sans-serif;
   }
   
   .section-padding {
@@ -36,10 +39,12 @@
   
   .heading-primary {
     @apply text-3xl lg:text-5xl font-bold text-gray-900 mb-6;
+    font-family: 'Oswald', sans-serif;
   }
   
   .heading-secondary {
     @apply text-2xl lg:text-4xl font-bold text-gray-900 mb-4;
+    font-family: 'Oswald', sans-serif;
   }
   
   .text-body {

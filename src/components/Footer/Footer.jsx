@@ -47,7 +47,7 @@ const Footer = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold font-display">H.P. Bright Academy</h3>
+                  <h3 className="text-xl font-bold font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>H.P. Bright Academy</h3>
                   <p className="text-gray-400 text-sm">Preschool to Class 8</p>
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6">Quick Links</h4>
+              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Quick Links</h4>
               <nav className="space-y-3">
                 {quickLinks.map((link) => (
                   <Link
@@ -105,7 +105,7 @@ const Footer = () => {
 
             {/* Academic Programs */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6">Academic Programs</h4>
+              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Academic Programs</h4>
               <nav className="space-y-3">
                 {academicLinks.map((link, index) => (
                   <a
@@ -121,7 +121,7 @@ const Footer = () => {
 
             {/* Contact Information */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6">Contact Info</h4>
+              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Contact Info</h4>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="text-primary-400 mt-1 flex-shrink-0" />

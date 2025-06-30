@@ -81,7 +81,7 @@ const Header = () => {
                 />
               </div>
               <div>
-                <h1 className="text-xl lg:text-2xl font-bold text-blue-800 font-display">
+                <h1 className="text-xl lg:text-2xl font-bold text-blue-800 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   H.P. Bright Academy
                 </h1>
                 <p className="text-xs text-gray-600 hidden sm:block">
@@ -101,6 +101,7 @@ const Header = () => {
                       ? 'text-blue-600 border-b-2 border-blue-600'
                       : 'text-gray-700 hover:text-blue-600'
                   } py-2`}
+                  style={{ fontFamily: "'Oswald', sans-serif" }}
                 >
                   {item.label}
                 </button>
@@ -108,6 +109,7 @@ const Header = () => {
               <button 
                 onClick={() => handleNavClick('/admissions')}
                 className="btn-primary"
+                style={{ fontFamily: "'Oswald', sans-serif" }}
               >
                 Admissions Open
               </button>
@@ -144,6 +146,7 @@ const Header = () => {
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }`}
+                      style={{ fontFamily: "'Oswald', sans-serif" }}
                     >
                       {item.label}
                     </button>
@@ -152,6 +155,7 @@ const Header = () => {
                     <button 
                       onClick={() => handleNavClick('/admissions')}
                       className="btn-primary w-full"
+                      style={{ fontFamily: "'Oswald', sans-serif" }}
                     >
                       Admissions Open
                     </button>

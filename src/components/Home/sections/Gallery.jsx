@@ -137,7 +137,7 @@ const Gallery = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-primary">
+          <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Our <span className="text-blue-600">Gallery</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

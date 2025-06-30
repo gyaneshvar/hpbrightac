@@ -149,7 +149,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Our <span className="text-primary-600">Core Values</span>
             </h2>
           </motion.div>
@@ -225,7 +225,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Our <span className="text-primary-600">Journey</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -272,7 +272,7 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Our <span className="text-primary-600">Leadership Team</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

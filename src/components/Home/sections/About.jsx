@@ -21,7 +21,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               About <span className="text-blue-600">H.P. Bright Academy</span>
             </h2>
             
@@ -51,7 +51,7 @@ const About = () => {
             {/* Mission and Vision */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display">Our Mission</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Mission</h3>
                 <p className="text-gray-600">
                   To provide quality education that develops critical thinking, creativity, and 
                   character while preparing students for future success.
@@ -59,7 +59,7 @@ const About = () => {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display">Our Vision</h3>
+                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Vision</h3>
                 <p className="text-gray-600">
                   To be a leading educational institution that shapes confident, compassionate, 
                   and capable global citizens.
@@ -103,8 +103,8 @@ const About = () => {
                   className="bg-white p-6 rounded-lg shadow-md text-center card-hover"
                 >
                   <stat.icon className="text-3xl text-blue-600 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  <div className="text-2xl font-bold text-gray-900 mb-1" style={{ fontFamily: "'Oswald', sans-serif" }}>{stat.number}</div>
+                  <div className="text-sm text-gray-600" style={{ fontFamily: "'Oswald', sans-serif" }}>{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -120,7 +120,7 @@ const About = () => {
           className="mt-20 bg-primary-50 rounded-lg p-8 lg:p-12"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl lg:text-3xl font-bold text-blue-800 mb-6 font-display">
+            <h3 className="text-2xl lg:text-3xl font-bold text-blue-800 mb-6 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Principal's Message
             </h3>
             <div className="flex flex-col lg:flex-row items-center gap-8">

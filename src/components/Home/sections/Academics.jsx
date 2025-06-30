@@ -60,7 +60,7 @@ const Academics = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-primary">
+          <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Our <span className="text-primary-600">Academic Programs</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -84,8 +84,8 @@ const Academics = () => {
                 <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <level.icon className="text-2xl text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-800 font-display">{level.title}</h3>
-                <p className="text-primary-600 font-medium">{level.age}</p>
+                <h3 className="text-2xl font-bold text-primary-800 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>{level.title}</h3>
+                <p className="text-primary-600 font-medium" style={{ fontFamily: "'Oswald', sans-serif" }}>{level.age}</p>
               </div>
               
               <p className="text-gray-700 mb-6 text-center">{level.description}</p>
@@ -110,7 +110,7 @@ const Academics = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12 font-display">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Subject Offerings
           </h3>
           
@@ -127,7 +127,7 @@ const Academics = () => {
                 <div className={`w-12 h-12 ${subject.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
                   <subject.icon className="text-white text-xl" />
                 </div>
-                <h4 className="font-semibold text-gray-900 text-sm">{subject.name}</h4>
+                <h4 className="font-semibold text-gray-900 text-sm" style={{ fontFamily: "'Oswald', sans-serif" }}>{subject.name}</h4>
               </motion.div>
             ))}
           </div>
@@ -141,7 +141,7 @@ const Academics = () => {
           viewport={{ once: true }}
           className="bg-gray-50 rounded-lg p-8 lg:p-12"
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12 font-display">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Our Teaching Methodology
           </h3>
           

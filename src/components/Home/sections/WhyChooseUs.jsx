@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-primary">
+          <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Why Choose <span className="text-primary-600">H.P. Bright Academy?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

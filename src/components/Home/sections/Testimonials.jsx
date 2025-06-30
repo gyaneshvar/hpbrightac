@@ -88,7 +88,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold font-display mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>
             What Our <span className="text-yellow-300">Community</span> Says
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
@@ -127,7 +127,7 @@ const Testimonials = () => {
                       className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
                     />
                     <div>
-                      <h4 className="text-xl font-bold font-display">
+                      <h4 className="text-xl font-bold font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
                         {testimonials[currentIndex].name}
                       </h4>
                       <p className="text-blue-200">
@@ -178,20 +178,20 @@ const Testimonials = () => {
           className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8"
         >
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-300 mb-2">98%</div>
-            <div className="text-blue-100">Parent Satisfaction</div>
+            <div className="text-4xl font-bold text-yellow-300 mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>98%</div>
+            <div className="text-blue-100" style={{ fontFamily: "'Oswald', sans-serif" }}>Parent Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-300 mb-2">500+</div>
-            <div className="text-blue-100">Happy Families</div>
+            <div className="text-4xl font-bold text-yellow-300 mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>500+</div>
+            <div className="text-blue-100" style={{ fontFamily: "'Oswald', sans-serif" }}>Happy Families</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-300 mb-2">15+</div>
-            <div className="text-blue-100">Years of Trust</div>
+            <div className="text-4xl font-bold text-yellow-300 mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>5+</div>
+            <div className="text-blue-100" style={{ fontFamily: "'Oswald', sans-serif" }}>Years of Trust</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-300 mb-2">100%</div>
-            <div className="text-blue-100">Dedicated Care</div>
+            <div className="text-4xl font-bold text-yellow-300 mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>100%</div>
+            <div className="text-blue-100" style={{ fontFamily: "'Oswald', sans-serif" }}>Dedicated Care</div>
           </div>
         </motion.div>
 
@@ -203,7 +203,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <h3 className="text-2xl font-bold mb-4 font-display">
+          <h3 className="text-2xl font-bold mb-4 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Ready to Join Our School Family?
           </h3>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">

@@ -114,6 +114,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold font-display mb-6"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             Contact Us
           </motion.h1>
@@ -137,6 +138,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="heading-primary text-center mb-16"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             Get in <span className="text-primary-600">Touch</span>
           </motion.h2>

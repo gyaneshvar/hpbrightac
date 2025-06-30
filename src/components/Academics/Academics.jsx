@@ -189,7 +189,7 @@ const Academics = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Our <span className="text-primary-600">Academic Programs</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -295,7 +295,7 @@ const Academics = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Subject <span className="text-primary-600">Offerings</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -339,7 +339,7 @@ const Academics = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="heading-primary">
+            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
               Our Teaching <span className="text-primary-600">Methodology</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

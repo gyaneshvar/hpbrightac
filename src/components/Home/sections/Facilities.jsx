@@ -102,7 +102,7 @@ const Facilities = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-primary">
+          <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
             Our <span className="text-primary-600">Facilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -137,7 +137,7 @@ const Facilities = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 font-display">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   {facility.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
