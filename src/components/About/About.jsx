@@ -364,20 +364,7 @@ const About = () => {
               Join the H.P. Bright Academy family and give your child the foundation 
               for a bright and successful future.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => navigate('/contact')}
-                className="btn-primary"
-              >
-                Schedule a Campus Visit
-              </button>
-              <button 
-                onClick={() => navigate('/admissions')}
-                className="btn-outline"
-              >
-                Download Prospectus
-              </button>
-            </div>
+
           </motion.div>
         </div>
       </section>

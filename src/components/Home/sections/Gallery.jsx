@@ -215,12 +215,6 @@ const Gallery = () => {
           <p className="text-gray-600 mb-6">
             Want to see more of our school life and activities?
           </p>
-          <button 
-            onClick={() => navigate('/contact')}
-            className="btn-primary"
-          >
-            Schedule a Campus Visit
-          </button>
         </motion.div>
       </div>
 

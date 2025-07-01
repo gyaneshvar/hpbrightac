@@ -210,14 +210,7 @@ const Testimonials = () => {
             Experience the difference of quality education with individual attention 
             and value-based learning at H.P. Bright Academy.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Schedule a Visit
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200">
-              Download Prospectus
-            </button>
-          </div>
+  
         </motion.div>
       </div>
     </section>

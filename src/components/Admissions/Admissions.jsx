@@ -184,65 +184,7 @@ const Admissions = () => {
         </div>
       </section>
 
-      {/* Fee Structure */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="heading-primary text-center mb-16"
-          >
-            Fee <span className="text-primary-600">Structure</span>
-          </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="overflow-x-auto"
-          >
-            <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
-              <thead className="bg-primary-600 text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left">Grade</th>
-                  <th className="px-6 py-4 text-left">Admission Fee</th>
-                  <th className="px-6 py-4 text-left">Monthly Fee</th>
-                  <th className="px-6 py-4 text-left">Annual Charges</th>
-                </tr>
-              </thead>
-              <tbody>
-                {feeStructure.map((fee, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="px-6 py-4 font-medium">{fee.grade}</td>
-                    <td className="px-6 py-4">{fee.admission}</td>
-                    <td className="px-6 py-4">{fee.monthly}</td>
-                    <td className="px-6 py-4">{fee.annual}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-8 text-center"
-          >
-            <p className="text-gray-600 mb-4">
-              * Additional charges may apply for transport, uniform, and books
-            </p>
-            <button className="btn-secondary inline-flex items-center space-x-2">
-              <FaDownload />
-              <span>Download Fee Structure PDF</span>
-            </button>
-          </motion.div>
-        </div>
-      </section>
+     
 
       {/* Required Documents */}
       <section className="section-padding bg-gray-50">

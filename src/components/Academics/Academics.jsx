@@ -476,17 +476,6 @@ const Academics = () => {
                   <div className="flex items-center space-x-4">
                     <FaDownload className="text-primary-600 text-xl" />
                     <div className="text-left">
-                      <h4 className="font-semibold text-gray-900">Academic Prospectus</h4>
-                      <p className="text-gray-600 text-sm">Complete curriculum details</p>
-                    </div>
-                  </div>
-                  <div className="text-primary-600">→</div>
-                </button>
-                
-                <button className="w-full flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <div className="flex items-center space-x-4">
-                    <FaDownload className="text-primary-600 text-xl" />
-                    <div className="text-left">
                       <h4 className="font-semibold text-gray-900">Fee Structure</h4>
                       <p className="text-gray-600 text-sm">Academic year 2024-25</p>
                     </div>
@@ -507,41 +496,6 @@ const Academics = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="heading-secondary mb-6">
-              Ready to Experience Our Academic Excellence?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Schedule a visit to see our teaching methods in action and learn more 
-              about how we can support your child's educational journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => navigate('/contact')}
-                className="btn-primary"
-              >
-                Schedule Campus Visit
-              </button>
-              <button 
-                onClick={() => navigate('/admissions')}
-                className="btn-outline"
-              >
-                Download Curriculum Guide
-              </button>
-            </div>
-          </motion.div>
         </div>
       </section>
     </div>
