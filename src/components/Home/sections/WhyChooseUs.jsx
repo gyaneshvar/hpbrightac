@@ -17,49 +17,57 @@ const WhyChooseUs = () => {
       icon: FaChalkboardTeacher,
       title: 'Experienced Faculty',
       description: 'Our qualified and dedicated teachers bring years of experience and passion for education.',
-      color: 'bg-blue-500'
+      color: 'from-blue-400 to-blue-600',
+      border: 'border-t-blue-500'
     },
     {
       icon: FaUsers,
       title: 'Small Class Sizes',
       description: 'Limited students per class ensure personalized attention and better learning outcomes.',
-      color: 'bg-green-500'
+      color: 'from-secondary-400 to-secondary-600',
+      border: 'border-t-secondary-500'
     },
     {
       icon: FaEye,
       title: 'Individual Attention',
       description: 'Every child is unique, and we tailor our approach to meet each student\'s needs.',
-      color: 'bg-purple-500'
+      color: 'from-purple-400 to-purple-600',
+      border: 'border-t-purple-500'
     },
     {
       icon: FaBuilding,
       title: 'Modern Facilities',
       description: 'State-of-the-art infrastructure with smart classrooms, labs, and recreational areas.',
-      color: 'bg-orange-500'
+      color: 'from-accent-400 to-accent-600',
+      border: 'border-t-accent-500'
     },
     {
       icon: FaHeart,
       title: 'Value-Based Education',
       description: 'We instill moral values, ethics, and character development alongside academic excellence.',
-      color: 'bg-red-500'
+      color: 'from-rose-400 to-rose-600',
+      border: 'border-t-rose-500'
     },
     {
       icon: FaHandshake,
       title: 'Parent-Teacher Collaboration',
       description: 'Regular meetings and open communication ensure parents are involved in their child\'s progress.',
-      color: 'bg-indigo-500'
+      color: 'from-indigo-400 to-indigo-600',
+      border: 'border-t-indigo-500'
     },
     {
       icon: FaStar,
       title: 'Holistic Development',
       description: 'Focus on academic, physical, emotional, and social development of every child.',
-      color: 'bg-yellow-500'
+      color: 'from-yellow-400 to-orange-500',
+      border: 'border-t-yellow-500'
     },
     {
       icon: FaShieldAlt,
       title: 'Safe Environment',
       description: 'Secure campus with CCTV monitoring, trained staff, and safety protocols in place.',
-      color: 'bg-pink-500'
+      color: 'from-pink-400 to-pink-600',
+      border: 'border-t-pink-500'
     }
   ];
 
@@ -92,9 +100,9 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg p-6 shadow-lg card-hover text-center group"
+              className={`bg-white rounded-3xl p-6 shadow-lg card-hover text-center group border-t-4 ${feature.border}`}
             >
-              <div className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
                 <feature.icon className="text-white text-2xl" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3 font-display">
@@ -113,7 +121,7 @@ const WhyChooseUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white rounded-lg p-8 lg:p-12 shadow-lg"
+          className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -166,12 +174,12 @@ const WhyChooseUs = () => {
             
             <div className="space-y-6">
               <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+                src={`${import.meta.env.BASE_URL}images/Activities/4.jpg`}
                 alt="Happy Students"
                 className="w-full h-64 object-cover rounded-lg shadow-md"
               />
               
-              <div className="bg-primary-50 p-6 rounded-lg">
+              <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-6 rounded-2xl border border-primary-100">
                 <h4 className="text-xl font-bold text-primary-800 mb-3 font-display">
                   Preparing Students for Future Success
                 </h4>

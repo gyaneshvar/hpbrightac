@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight, FaUser } from 'react-icons/fa';
 
+const avatarColors = [
+  'bg-blue-500', 'bg-emerald-500', 'bg-purple-500',
+  'bg-orange-500', 'bg-rose-500', 'bg-indigo-500'
+];
+
+const getInitials = (name) =>
+  name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -78,7 +86,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-600 to-blue-700 text-white overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-accent-500 via-primary-600 to-secondary-700 text-white overflow-hidden">
       <div className="container-custom">
         {/* Header */}
         <motion.div
@@ -121,11 +129,12 @@ const Testimonials = () => {
                   </div>
                   
                   <div className="flex items-center justify-center space-x-4">
-                    <img
-                      src={testimonials[currentIndex].image}
-                      alt={testimonials[currentIndex].name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
-                    />
+                    <div
+                      className={`w-16 h-16 rounded-full ${avatarColors[currentIndex % avatarColors.length]} flex items-center justify-center border-2 border-white/30 text-white font-bold text-lg flex-shrink-0`}
+                      style={{ fontFamily: "'Oswald', sans-serif" }}
+                    >
+                      {getInitials(testimonials[currentIndex].name)}
+                    </div>
                     <div>
                       <h4 className="text-xl font-bold font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>
                         {testimonials[currentIndex].name}

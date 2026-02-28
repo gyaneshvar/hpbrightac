@@ -20,21 +20,36 @@ const Academics = () => {
       title: 'Preschool',
       age: 'Ages 3-5',
       description: 'Foundation for lifelong learning through play-based activities, social skills development, and basic literacy.',
-      features: ['Play-based Learning', 'Motor Skills Development', 'Social Interaction', 'Basic Concepts']
+      features: ['Play-based Learning', 'Motor Skills Development', 'Social Interaction', 'Basic Concepts'],
+      gradient: 'from-pink-50 to-purple-50',
+      iconBg: 'from-pink-400 to-purple-500',
+      border: 'border-t-pink-400',
+      textColor: 'text-pink-700',
+      dotColor: 'bg-pink-500'
     },
     {
       icon: FaChild,
       title: 'Primary (Classes 1-5)',
       age: 'Ages 6-10',
       description: 'Building strong academic foundations with focus on core subjects and developing critical thinking skills.',
-      features: ['Core Subjects', 'Creative Arts', 'Physical Education', 'Character Building']
+      features: ['Core Subjects', 'Creative Arts', 'Physical Education', 'Character Building'],
+      gradient: 'from-primary-50 to-cyan-50',
+      iconBg: 'from-primary-500 to-cyan-500',
+      border: 'border-t-primary-500',
+      textColor: 'text-primary-700',
+      dotColor: 'bg-primary-500'
     },
     {
       icon: FaUserGraduate,
       title: 'Middle School (Classes 6-8)',
       age: 'Ages 11-13',
       description: 'Advanced learning with specialized subjects, preparing students for higher secondary education.',
-      features: ['Advanced Curriculum', 'Science Labs', 'Project Work', 'Leadership Skills']
+      features: ['Advanced Curriculum', 'Science Labs', 'Project Work', 'Leadership Skills'],
+      gradient: 'from-emerald-50 to-teal-50',
+      iconBg: 'from-emerald-500 to-teal-500',
+      border: 'border-t-emerald-500',
+      textColor: 'text-emerald-700',
+      dotColor: 'bg-emerald-500'
     }
   ];
 
@@ -78,14 +93,14 @@ const Academics = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-lg p-8 card-hover"
+              className={`bg-gradient-to-br ${level.gradient} rounded-3xl p-8 card-hover border-t-4 ${level.border} shadow-md`}
             >
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className={`w-16 h-16 bg-gradient-to-br ${level.iconBg} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md`}>
                   <level.icon className="text-2xl text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-800 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>{level.title}</h3>
-                <p className="text-primary-600 font-medium" style={{ fontFamily: "'Oswald', sans-serif" }}>{level.age}</p>
+                <h3 className={`text-2xl font-bold ${level.textColor}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{level.title}</h3>
+                <p className={`${level.textColor} font-medium opacity-80`} style={{ fontFamily: "'Oswald', sans-serif" }}>{level.age}</p>
               </div>
               
               <p className="text-gray-700 mb-6 text-center">{level.description}</p>
@@ -93,7 +108,7 @@ const Academics = () => {
               <div className="space-y-2">
                 {level.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                    <div className={`w-2 h-2 ${level.dotColor} rounded-full`}></div>
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -122,7 +137,7 @@ const Academics = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg p-6 shadow-md card-hover text-center border border-gray-100"
+                className="bg-white rounded-2xl p-6 shadow-md card-hover text-center border border-gray-100 border-b-4 border-b-gray-200 hover:border-b-primary-400"
               >
                 <div className={`w-12 h-12 ${subject.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
                   <subject.icon className="text-white text-xl" />

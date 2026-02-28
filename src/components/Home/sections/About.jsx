@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -50,16 +50,16 @@ const About = () => {
 
             {/* Mission and Vision */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Mission</h3>
+              <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-primary-500">
+                <h3 className="text-xl font-bold text-primary-800 mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Mission</h3>
                 <p className="text-gray-600">
                   To provide quality education that develops critical thinking, creativity, and 
                   character while preparing students for future success.
                 </p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-blue-800 mb-3 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Vision</h3>
+              <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-secondary-500">
+                <h3 className="text-xl font-bold text-secondary-800 mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>Our Vision</h3>
                 <p className="text-gray-600">
                   To be a leading educational institution that shapes confident, compassionate, 
                   and capable global citizens.
@@ -100,7 +100,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-lg shadow-md text-center card-hover"
+                  className="bg-white p-6 rounded-2xl shadow-md text-center card-hover border-t-4 border-primary-400"
                 >
                   <stat.icon className="text-3xl text-blue-600 mx-auto mb-3" />
                   <div className="text-2xl font-bold text-gray-900 mb-1" style={{ fontFamily: "'Oswald', sans-serif" }}>{stat.number}</div>
@@ -117,7 +117,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="mt-20 bg-primary-50 rounded-lg p-8 lg:p-12"
+          className="mt-20 bg-gradient-to-br from-primary-100 to-secondary-50 rounded-2xl p-8 lg:p-12 shadow-inner"
         >
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl lg:text-3xl font-bold text-blue-800 mb-6 font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>

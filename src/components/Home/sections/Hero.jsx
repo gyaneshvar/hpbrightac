@@ -66,18 +66,24 @@ const Hero = () => {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-primary-900/50 to-black/60 z-10"></div>
+
+      {/* Floating Decorative Blobs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary-400/20 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none"></div>
+      <div className="absolute bottom-32 right-10 w-96 h-96 bg-secondary-400/15 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-accent-400/15 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none" style={{ animationDelay: '2s' }}></div>
 
       {/* Content */}
       <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
         <motion.h1 
-          className="text-5xl md:text-7xl font-bold mb-6"
+          className="text-6xl md:text-8xl font-black mb-6 leading-tight"
+          style={{ fontFamily: "'Oswald', sans-serif" }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Welcome to{' '}
-          <span className="text-yellow-400">H.P. Bright Academy</span>
+          <span className="bg-gradient-to-r from-yellow-300 to-accent-400 bg-clip-text text-transparent">H.P. Bright Academy</span>
         </motion.h1>
         
         <motion.p 
@@ -98,7 +104,8 @@ const Hero = () => {
         >
           <button
             onClick={handleAdmissionsClick}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="bg-gradient-to-r from-accent-500 to-primary-500 hover:from-accent-600 hover:to-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             <span>Admissions Open</span>
             <FaArrowRight className="text-sm" />
@@ -106,7 +113,8 @@ const Hero = () => {
           
           <button
             onClick={handleVirtualTourClick}
-            className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+            className="bg-white/20 backdrop-blur-sm border-2 border-white/70 hover:bg-white hover:text-gray-800 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
           >
             <FaPlay className="text-sm" />
             <span>Virtual Tour</span>
@@ -120,17 +128,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
-            <h3 className="text-xl font-bold mb-2">Expert Teachers</h3>
-            <p className="text-gray-200">Qualified and caring educators dedicated to your child's growth</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-yellow-400 shadow-lg">
+            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Expert Teachers</h3>
+            <p className="text-gray-200 text-sm">Qualified and caring educators dedicated to your child's growth</p>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
-            <h3 className="text-xl font-bold mb-2">Safe Environment</h3>
-            <p className="text-gray-200">Secure and nurturing campus for optimal learning</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-secondary-400 shadow-lg">
+            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Safe Environment</h3>
+            <p className="text-gray-200 text-sm">Secure and nurturing campus for optimal learning</p>
           </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 text-center">
-            <h3 className="text-xl font-bold mb-2">Holistic Development</h3>
-            <p className="text-gray-200">Academic excellence combined with character building</p>
+          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-accent-400 shadow-lg">
+            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Holistic Development</h3>
+            <p className="text-gray-200 text-sm">Academic excellence combined with character building</p>
           </div>
         </motion.div>
       </div>
