@@ -379,6 +379,64 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Google Map Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="heading-primary mb-3">
+              Find <span className="text-primary-600">Us Here</span>
+            </h2>
+            <p className="text-gray-500 text-base">
+              Chamao Shivpur Tarna, Ganeshpur, Varanasi, Uttar Pradesh 221105
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden shadow-2xl border border-gray-100"
+          >
+            <iframe
+              title="H.P. Bright Academy Location"
+              src="https://maps.google.com/maps?q=9W7F%2B7XV+Ganeshpur,+Uttar+Pradesh&z=16&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0, display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-6 text-center"
+          >
+            <a
+              href="https://maps.google.com/?q=9W7F%2B7XV+Ganeshpur,+Uttar+Pradesh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              style={{ fontFamily: "'Oswald', sans-serif" }}
+            >
+              <FaMapMarkerAlt />
+              Open in Google Maps
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
