@@ -32,7 +32,13 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
+      {/* Wave Divider */}
+      <div className="w-full overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="block w-full" preserveAspectRatio="none">
+          <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="#0066cc" fillOpacity="0.9"/>
+          <path d="M0,40 C480,10 960,60 1440,20 L1440,0 L0,0 Z" fill="#00cc66" fillOpacity="0.5"/>
+        </svg>
+      </div>
       <div className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -55,16 +61,42 @@ const Footer = () => {
                 Nurturing young minds with quality education, individual attention, and 
                 value-based learning in a safe and caring environment.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3">
                 <a 
                 target="_blank"
                   href="https://www.facebook.com/hpbrightacademy/" 
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                  className="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors duration-200"
                   aria-label="Facebook"
                 >
                   <FaFacebookF size={16} />
                 </a>
-                
+                <a 
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 rounded-full flex items-center justify-center transition-all duration-200"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={16} />
+                </a>
+                <a 
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors duration-200"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube size={16} />
+                </a>
+                <a 
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-sky-500 hover:bg-sky-400 rounded-full flex items-center justify-center transition-colors duration-200"
+                  aria-label="Twitter"
+                >
+                  <FaTwitter size={16} />
+                </a>
               </div>
             </div>
 

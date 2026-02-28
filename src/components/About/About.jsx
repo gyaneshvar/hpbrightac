@@ -29,19 +29,19 @@ const About = () => {
       name: 'Mrs. Pooja Verma',
       position: 'Principal',
       experience: '12+ years',
-      image: '/images/AboutUs/principal.png'
+      image: `${import.meta.env.BASE_URL}images/AboutUs/principal.png`
     },
     {
       name: 'Mr. Ravi Prakash Singh',
       position: 'Co-Founder & Head of Academics',
       experience: '15+ years',
-      image: '/images/AboutUs/coordinator.png'
+      image: `${import.meta.env.BASE_URL}images/AboutUs/coordinator.png`
     },
     {
       name: 'Mr. Shambhu Narayan',
       position: 'Chairman',
       experience: '35+ years',
-      image: '/images/AboutUs/chairman.jpg?q=80&w=300&auto=format&fit=crop'
+      image: `${import.meta.env.BASE_URL}images/AboutUs/chairman.jpg`
     }
   ];
 

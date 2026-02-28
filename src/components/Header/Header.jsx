@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-blue-800 text-white py-2 hidden lg:block">
+      <div className="bg-gradient-to-r from-primary-700 via-primary-600 to-secondary-600 text-white py-2 hidden lg:block">
         <div className="container-custom">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
@@ -96,11 +96,11 @@ const Header = () => {
                 <button
                   key={item.path}
                   onClick={() => handleNavClick(item.path)}
-                  className={`font-medium transition-colors duration-200 ${
+                  className={`inline-flex items-center justify-center leading-none font-medium transition-all duration-200 h-9 ${
                     location.pathname === item.path
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
-                  } py-2`}
+                      ? 'text-primary-700 bg-primary-50 px-4 rounded-full'
+                      : 'text-gray-700 hover:text-primary-600 px-2'
+                  }`}
                   style={{ fontFamily: "'Oswald', sans-serif" }}
                 >
                   {item.label}
@@ -108,7 +108,7 @@ const Header = () => {
               ))}
               <button 
                 onClick={() => handleNavClick('/admissions')}
-                className="btn-primary"
+                className="btn-primary ring-2 ring-primary-300 ring-offset-2"
                 style={{ fontFamily: "'Oswald', sans-serif" }}
               >
                 Admissions Open
@@ -133,7 +133,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-200"
+              className="lg:hidden bg-gradient-to-b from-white to-primary-50 border-t border-primary-100"
             >
               <div className="container-custom py-4">
                 <nav className="flex flex-col space-y-4">
@@ -141,10 +141,10 @@ const Header = () => {
                     <button
                       key={item.path}
                       onClick={() => handleNavClick(item.path)}
-                      className={`font-medium transition-colors duration-200 py-2 px-4 rounded-md text-left ${
+                      className={`font-medium transition-all duration-200 py-2 px-4 rounded-full text-left ${
                         location.pathname === item.path
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                          ? 'text-primary-700 bg-primary-100'
+                          : 'text-gray-700 hover:text-primary-600 hover:bg-primary-50'
                       }`}
                       style={{ fontFamily: "'Oswald', sans-serif" }}
                     >
