@@ -22,6 +22,7 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitResult, setSubmitResult] = useState({ message: '', success: null });
 
   const contactInfo = [
     {
@@ -85,23 +86,33 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! We will get back to you within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    setSubmitResult({ message: '', success: null });
+
+    const formDataToSend = new FormData(e.target);
+    formDataToSend.append('access_key', 'd6e8c130-b17f-4cd0-ba6c-30e47b1b81c9');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitResult({ message: 'Thank you! Your message has been sent successfully. We will get back to you within 24 hours.', success: true });
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        setSubmitResult({ message: data.message || 'Something went wrong. Please try again.', success: false });
+      }
+    } catch {
+      setSubmitResult({ message: 'Network error. Please check your connection and try again.', success: false });
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
 
   return (
@@ -297,6 +308,16 @@ const Contact = () => {
                   <FaPaperPlane />
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </button>
+
+                {submitResult.message && (
+                  <p className={`text-sm font-medium text-center px-4 py-3 rounded-lg ${
+                    submitResult.success
+                      ? 'bg-green-50 text-green-700'
+                      : 'bg-red-50 text-red-700'
+                  }`}>
+                    {submitResult.message}
+                  </p>
+                )}
               </form>
             </motion.div>
 
