@@ -1,153 +1,131 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ImageSlideshow from '../ImageSlideshow/ImageSlideshow';
+import SectionHeading from '../shared/SectionHeading';
+
+const categories = [
+  {
+    name: 'Campus',
+    description: 'The physical environment where school life happens every day.',
+    maxImages: 2,
+  },
+  {
+    name: 'Activities',
+    description: 'Learning, play, and participation captured in motion.',
+    maxImages: 6,
+  },
+  {
+    name: 'Events',
+    description: 'Celebrations and school moments that build memory and belonging.',
+    maxImages: 2,
+  },
+  {
+    name: 'Achievements',
+    description: 'The milestones that reflect effort, confidence, and recognition.',
+    maxImages: 2,
+  },
+];
 
 const EnhancedGallery = () => {
   const [activeCategory, setActiveCategory] = useState('Campus');
-
-  const categories = [
-    {
-      name: 'Campus',
-      description: 'Our beautiful and safe campus facilities',
-      maxImages: 2,
-      color: 'bg-blue-500'
-    },
-    {
-      name: 'Activities',
-      description: 'Engaging learning activities and play time',
-      maxImages: 6,
-      color: 'bg-green-500'
-    },
-    {
-      name: 'Events',
-      description: 'Special celebrations and events',
-      maxImages: 2,
-      color: 'bg-purple-500'
-    },
-    {
-      name: 'Achievements',
-      description: 'Student accomplishments and awards',
-      maxImages: 2,
-      color: 'bg-yellow-500'
-    }
-  ];
+  const activeCategoryData = categories.find((category) => category.name === activeCategory);
 
   return (
-    <section id="gallery" className="py-16 bg-gray-50">
+    <section id="gallery" className="section-shell section-padding">
       <div className="container-custom">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>
-            School Gallery
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our vibrant school life through pictures that capture the essence of learning, growth, and joy at H.P. Bright Academy
-          </p>
-        </motion.div>
+        <SectionHeading
+          eyebrow="Visual proof"
+          title="A gallery that shows the school with"
+          highlight="presence, not filler."
+          description="Families decide with their eyes long before they fill a form. The gallery now frames the campus, children, and events in a more deliberate way so the school feels real and credible."
+          align="center"
+        />
 
-        {/* Category Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-8"
-        >
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              onClick={() => setActiveCategory(category.name)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category.name
-                  ? `${category.color} text-white shadow-lg transform scale-105`
-                  : 'bg-white text-gray-600 hover:bg-gray-100 shadow-md'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </motion.div>
+        <div className="mt-12 grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="soft-card p-6">
+            <span className="eyebrow">Browse chapters</span>
+            <div className="mt-6 space-y-3">
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => setActiveCategory(category.name)}
+                  className={`w-full rounded-[1.4rem] border px-5 py-4 text-left transition duration-200 ${
+                    activeCategory === category.name
+                      ? 'border-slate-900 bg-slate-900 text-white'
+                      : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <div className="text-lg" style={{ fontFamily: "'Oswald', sans-serif" }}>{category.name}</div>
+                      <p className={`mt-2 text-sm leading-6 ${activeCategory === category.name ? 'text-white/72' : 'text-slate-500'}`}>
+                        {category.description}
+                      </p>
+                    </div>
+                    <div className={`rounded-full px-3 py-1 text-xs uppercase tracking-[0.16em] ${activeCategory === category.name ? 'bg-white/12 text-white' : 'bg-slate-100 text-slate-500'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>
+                      View
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
 
-        {/* Active Category Description */}
-        <motion.div
-          key={activeCategory}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-center mb-8"
-        >
-          <p className="text-lg text-gray-600">
-            {categories.find(cat => cat.name === activeCategory)?.description}
-          </p>
-        </motion.div>
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="soft-card overflow-hidden p-4"
+          >
+            <div className="flex flex-wrap items-end justify-between gap-4 px-2 pb-4 pt-2">
+              <div>
+                <span className="label-chip">{activeCategory}</span>
+                <h3 className="mt-3 font-display text-4xl leading-none text-slate-900">{activeCategoryData?.description}</h3>
+              </div>
+            </div>
+            <ImageSlideshow
+              category={activeCategory}
+              maxImages={activeCategoryData?.maxImages || 6}
+              autoPlay={true}
+              interval={4000}
+              showControls={true}
+              className="overflow-hidden rounded-[1.6rem] shadow-2xl"
+            />
+          </motion.div>
+        </div>
 
-        {/* Slideshow */}
-        <motion.div
-          key={activeCategory}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto"
-        >
-          <ImageSlideshow
-            category={activeCategory}
-            maxImages={categories.find(cat => cat.name === activeCategory)?.maxImages || 6}
-            autoPlay={true}
-            interval={4000}
-            showControls={true}
-            className="shadow-2xl"
-          />
-        </motion.div>
-
-        {/* Category Grid - Show all categories in smaller slideshows */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
-        >
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category, index) => (
-            <motion.div
+            <motion.button
               key={category.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group cursor-pointer"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true, amount: 0.2 }}
               onClick={() => setActiveCategory(category.name)}
+              className="soft-card overflow-hidden text-left"
             >
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                {/* Mini Slideshow */}
-                <div className="h-48">
-                  <ImageSlideshow
-                    category={category.name}
-                    maxImages={category.maxImages}
-                    autoPlay={activeCategory !== category.name}
-                    interval={5000 + index * 1000} // Stagger intervals
-                    showControls={false}
-                    className="h-full"
-                  />
-                </div>
-                
-                {/* Category Info */}
-                <div className="p-4">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {category.description}
-                  </p>
-                  <div className={`inline-block px-3 py-1 rounded-full text-xs text-white mt-3 ${category.color}`}>
-                    View Gallery
-                  </div>
-                </div>
+              <div className="h-44">
+                <ImageSlideshow
+                  category={category.name}
+                  maxImages={category.maxImages}
+                  autoPlay={activeCategory !== category.name}
+                  interval={5300 + index * 500}
+                  showControls={false}
+                  className="h-full"
+                />
               </div>
-            </motion.div>
+              <div className="p-5">
+                <div className="flex items-center justify-between gap-3">
+                  <h4 className="text-xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>{category.name}</h4>
+                  <span className="label-chip">Preview</span>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{category.description}</p>
+              </div>
+            </motion.button>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -31,41 +31,38 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      {/* Wave Divider */}
-      <div className="w-full overflow-hidden leading-none">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="block w-full" preserveAspectRatio="none">
-          <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="#0066cc" fillOpacity="0.9"/>
-          <path d="M0,40 C480,10 960,60 1440,20 L1440,0 L0,0 Z" fill="#00cc66" fillOpacity="0.5"/>
-        </svg>
-      </div>
-      <div className="section-padding">
+    <footer className="relative overflow-hidden bg-[var(--ink-950)] text-white">
+      <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-primary-500/20 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#d4a545]/10 blur-3xl" />
+      <div className="section-padding relative">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* School Information */}
+          <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.15fr_0.75fr_0.75fr_1fr]">
             <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12">
+              <span className="eyebrow text-white/75 before:bg-white/30">H.P. Bright Academy</span>
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white">
                   <img 
                     src={import.meta.env.BASE_URL + "images/Logo.png"} 
                     alt="H.P. Bright Academy Logo" 
-                    className="w-full h-full object-contain"
+                    className="h-10 w-10 object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold font-display" style={{ fontFamily: "'Oswald', sans-serif" }}>H.P. Bright Academy</h3>
-                  <p className="text-gray-400 text-sm">Preschool to Class 8</p>
+                  <h3 className="font-display text-4xl leading-none text-white">H.P. Bright Academy</h3>
+                  <p className="mt-2 text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    Preschool to Class 8
+                  </p>
                 </div>
               </div>
-              <p className="text-gray-300 leading-relaxed">
-                Nurturing young minds with quality education, individual attention, and 
-                value-based learning in a safe and caring environment.
+              <p className="max-w-md text-base leading-8 text-white/72">
+                A thoughtful campus in Varanasi where children learn with discipline, curiosity, and warmth. The school experience is built to feel personal, calm, and ambitious from the first day onward.
               </p>
-              <div className="flex space-x-3">
+              <div className="flex flex-wrap gap-3">
                 <a 
-                target="_blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/hpbrightacademy/" 
-                  className="w-10 h-10 bg-blue-600 hover:bg-blue-500 rounded-full flex items-center justify-center transition-colors duration-200"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 transition duration-200 hover:bg-white/14"
                   aria-label="Facebook"
                 >
                   <FaFacebookF size={16} />
@@ -74,7 +71,7 @@ const Footer = () => {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 rounded-full flex items-center justify-center transition-all duration-200"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 transition duration-200 hover:bg-white/14"
                   aria-label="Instagram"
                 >
                   <FaInstagram size={16} />
@@ -83,7 +80,7 @@ const Footer = () => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-red-600 hover:bg-red-500 rounded-full flex items-center justify-center transition-colors duration-200"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 transition duration-200 hover:bg-white/14"
                   aria-label="YouTube"
                 >
                   <FaYoutube size={16} />
@@ -92,7 +89,7 @@ const Footer = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-sky-500 hover:bg-sky-400 rounded-full flex items-center justify-center transition-colors duration-200"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/14 bg-white/8 transition duration-200 hover:bg-white/14"
                   aria-label="Twitter"
                 >
                   <FaTwitter size={16} />
@@ -100,15 +97,14 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Quick Links</h4>
-              <nav className="space-y-3">
+              <h4 className="mb-6 text-sm uppercase tracking-[0.2em] text-white/60" style={{ fontFamily: "'Oswald', sans-serif" }}>Explore</h4>
+              <nav className="space-y-4">
                 {quickLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="block text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="link-underline block w-fit text-white/76 transition-colors duration-200 hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -116,15 +112,14 @@ const Footer = () => {
               </nav>
             </div>
 
-            {/* Academic Programs */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Academic Programs</h4>
-              <nav className="space-y-3">
+              <h4 className="mb-6 text-sm uppercase tracking-[0.2em] text-white/60" style={{ fontFamily: "'Oswald', sans-serif" }}>Programs</h4>
+              <nav className="space-y-4">
                 {academicLinks.map((link, index) => (
                   <a
                     key={index}
-                    href="#"
-                    className="block text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    href="/academics"
+                    className="link-underline block w-fit text-white/76 transition-colors duration-200 hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -132,43 +127,42 @@ const Footer = () => {
               </nav>
             </div>
 
-            {/* Contact Information */}
             <div>
-              <h4 className="text-lg font-semibold font-display mb-6" style={{ fontFamily: "'Oswald', sans-serif" }}>Contact Info</h4>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <FaMapMarkerAlt className="text-primary-400 mt-1 flex-shrink-0" />
+              <h4 className="mb-6 text-sm uppercase tracking-[0.2em] text-white/60" style={{ fontFamily: "'Oswald', sans-serif" }}>Contact</h4>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3 text-white/76">
+                  <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-[#f5d48d]" />
                   <div>
-                    <p className="text-gray-300">
+                    <p>
                       Chamao Shivpur Tarna, Ganeshpur,<br />
                       Varanasi, Uttar Pradesh 221105
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <FaPhone className="text-primary-400" />
+                <div className="flex items-center gap-3">
+                  <FaPhone className="text-[#f5d48d]" />
                   <a 
                     href="tel:+918400308200" 
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-white/76 transition-colors duration-200 hover:text-white"
                   >
                     +91 8400308200
                   </a>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <FaEnvelope className="text-primary-400" />
+                <div className="flex items-center gap-3">
+                  <FaEnvelope className="text-[#f5d48d]" />
                   <a 
                     href="mailto:info@hpbrightacademy.in" 
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-white/76 transition-colors duration-200 hover:text-white"
                   >
                     info@hpbrightacademy.in
                   </a>
                 </div>
-                <div className="pt-4">
+                <div className="pt-3">
                   <a
                     href="https://wa.me/918400308200"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                    className="btn-secondary"
                   >
                     <FaWhatsapp />
                     <span>WhatsApp Us</span>
@@ -180,21 +174,20 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800 py-6">
+      <div className="relative border-t border-white/10 py-6">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+            <p className="text-sm text-white/50">
               © {currentYear} H.P. Bright Academy. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+            <div className="flex items-center gap-6 text-sm text-white/50">
+              <a href="#" className="transition-colors duration-200 hover:text-white/80">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+              <a href="#" className="transition-colors duration-200 hover:text-white/80">
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-primary-400 transition-colors duration-200">
+              <a href="#" className="transition-colors duration-200 hover:text-white/80">
                 Sitemap
               </a>
             </div>

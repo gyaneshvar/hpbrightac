@@ -1,371 +1,229 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { 
-  FaHistory, 
-  FaEye, 
-  FaHeart, 
-  FaAward, 
-  FaGraduationCap,
-  FaUsers,
-  FaStar,
-  FaShieldAlt
-} from 'react-icons/fa';
+import { FaArrowRight, FaEye, FaHeart, FaLeaf, FaShieldAlt, FaStar } from 'react-icons/fa';
+import PageHero from '../shared/PageHero';
+import SectionHeading from '../shared/SectionHeading';
+
+const milestones = [
+  { year: '2019', event: 'The school begins its journey with a vision for a calmer, values-first education.' },
+  { year: '2020', event: 'Foundational early-years programs deepen with stronger parent-school communication.' },
+  { year: '2021', event: 'Academic offerings expand steadily through upper classes and wider student support.' },
+  { year: '2022', event: 'Teaching spaces and classroom methods are strengthened with more modern tools.' },
+  { year: '2023', event: 'The school earns stronger recognition locally for its discipline and learning culture.' },
+  { year: '2024', event: 'Campus presentation, activity-led learning, and school identity continue to mature.' },
+  { year: '2025', event: 'H.P. Bright Academy completes five years of trust with growing community confidence.' },
+];
+
+const leadership = [
+  {
+    name: 'Mrs. Pooja Verma',
+    role: 'Principal',
+    experience: '12+ years in education',
+    image: `${import.meta.env.BASE_URL}images/AboutUs/principal.png`,
+  },
+  {
+    name: 'Mr. Ravi Prakash Singh',
+    role: 'Co-Founder & Head of Academics',
+    experience: '15+ years in academics',
+    image: `${import.meta.env.BASE_URL}images/AboutUs/coordinator.png`,
+  },
+  {
+    name: 'Mr. Shambhu Narayan',
+    role: 'Chairman',
+    experience: '35+ years of leadership',
+    image: `${import.meta.env.BASE_URL}images/AboutUs/chairman.jpg`,
+  },
+];
+
+const values = [
+  {
+    icon: FaEye,
+    title: 'Vision with discipline',
+    description: 'Students are encouraged to think ahead while staying rooted in strong habits and respectful conduct.',
+  },
+  {
+    icon: FaHeart,
+    title: 'Care with accountability',
+    description: 'Warmth matters, but so does structure. The school aims to offer both at the same time.',
+  },
+  {
+    icon: FaLeaf,
+    title: 'Growth that feels balanced',
+    description: 'Academic learning, creativity, and behaviour are developed together instead of in isolation.',
+  },
+  {
+    icon: FaShieldAlt,
+    title: 'Trust families can feel',
+    description: 'Parents should feel that the campus is safe, serious, and genuinely invested in their child.',
+  },
+];
 
 const About = () => {
   const navigate = useNavigate();
-  const milestones = [
-    { year: '2019', event: 'H.P. Bright Academy Founded' },
-    { year: '2020', event: 'First Graduating Class of 50 Students' },
-    { year: '2021', event: 'Expanded to Include Middle School' },
-    { year: '2022', event: 'Introduced Smart Classroom Technology' },
-    { year: '2023', event: 'Achieved Excellence in State Education Awards' },
-    { year: '2024', event: 'Successfully Transitioned to Hybrid Learning' },
-    { year: '2025', event: 'Celebrated 5 Years of Educational Excellence' }
-  ];
-
-  const faculty = [
-    {
-      name: 'Mrs. Pooja Verma',
-      position: 'Principal',
-      experience: '12+ years',
-      image: `${import.meta.env.BASE_URL}images/AboutUs/principal.png`
-    },
-    {
-      name: 'Mr. Ravi Prakash Singh',
-      position: 'Co-Founder & Head of Academics',
-      experience: '15+ years',
-      image: `${import.meta.env.BASE_URL}images/AboutUs/coordinator.png`
-    },
-    {
-      name: 'Mr. Shambhu Narayan',
-      position: 'Chairman',
-      experience: '35+ years',
-      image: `${import.meta.env.BASE_URL}images/AboutUs/chairman.jpg`
-    }
-  ];
-
-  const awards = [
-    'Best School for Holistic Education - 2023',
-    'Excellence in Value-Based Learning - 2022',
-    'Outstanding Academic Performance - 2021',
-    'Best Safety Standards Award - 2020',
-    'Innovation in Teaching Methods - 2024'
-  ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-primary-600 to-blue-600 text-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold font-display mb-6">
-              About <span className="text-yellow-300">H.P. Bright Academy</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Fifteen years of nurturing young minds and shaping future leaders 
-              through quality education and value-based learning.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About the institution"
+        title="A school built to feel"
+        highlight="personal, steady, and ambitious."
+        description="H.P. Bright Academy serves Preschool to Class 8 in Varanasi with a philosophy centered on individual attention, disciplined learning, and a campus atmosphere families can trust."
+        image={`${import.meta.env.BASE_URL}images/Campus/1.jpg`}
+        imageAlt="H.P. Bright Academy campus"
+        stats={[
+          { value: '2019', label: 'founded' },
+          { value: '500+', label: 'students served' },
+          { value: '15+', label: 'faculty members' },
+        ]}
+        actions={
+          <>
+            <button onClick={() => navigate('/admissions')} className="btn-primary">
+              Explore Admissions
+              <FaArrowRight className="text-xs" />
+            </button>
+            <button onClick={() => navigate('/contact')} className="btn-outline border-white/30 bg-white/12 text-white hover:bg-white hover:text-slate-900">
+              Visit the Campus
+            </button>
+          </>
+        }
+      />
 
-      {/* School Story */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="heading-secondary">Our Story</h2>
-              <div className="space-y-6 text-body">
-                <p className="text-lg">
-                  Founded in 2008 with a vision to provide quality education that nurtures both 
-                  academic excellence and character development, H.P. Bright Academy has been 
-                  a beacon of educational innovation in Varanasi for over 15 years.
-                </p>
-                <p>
-                  What started as a small preschool with just 20 students has grown into a 
-                  comprehensive educational institution serving over 500 students from preschool 
-                  to Class 8. Our journey has been marked by continuous growth, innovation, and 
-                  an unwavering commitment to educational excellence.
-                </p>
-                <p>
-                  We believe that every child is unique and has unlimited potential. Our approach 
-                  combines modern teaching methodologies with traditional values, creating an 
-                  environment where children not only excel academically but also develop into 
-                  responsible, confident, and compassionate individuals.
-                </p>
-              </div>
-            </motion.div>
+      <section className="section-shell section-padding">
+        <div className="container-custom grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div>
+            <SectionHeading
+              eyebrow="School story"
+              title="The school grew by staying close to"
+              highlight="what families actually need."
+              description="That means clear teaching, safer routines, and an environment where children are guided with attention instead of getting lost inside a crowd."
+            />
+            <div className="mt-8 space-y-5 text-body">
+              <p>
+                H.P. Bright Academy was established to give local families a more thoughtful school option: one that respects academic foundations, values-based development, and the emotional comfort children need in their early years.
+              </p>
+              <p>
+                Over time, the institution has grown in both scale and maturity. What matters most is that the school experience still feels personal. Teachers remain visible, communication stays direct, and students are encouraged to build confidence with consistency.
+              </p>
+            </div>
+          </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 gap-4"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=400&auto=format&fit=crop"
-                alt="School Campus"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop"
-                alt="Students Learning"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=400&auto=format&fit=crop"
-                alt="Modern Classroom"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=400&auto=format&fit=crop"
-                alt="Sports Activities"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
-              />
-            </motion.div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <img
+              src={`${import.meta.env.BASE_URL}images/Activities/4.jpg`}
+              alt="Students in class"
+              className="soft-card h-56 w-full object-cover p-2"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/Events/1.jpg`}
+              alt="School event"
+              className="soft-card h-56 w-full object-cover p-2 sm:mt-10"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/Campus/2.jpg`}
+              alt="School campus view"
+              className="soft-card h-56 w-full object-cover p-2"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/Activities/6.jpg`}
+              alt="Students participating in activity"
+              className="soft-card h-56 w-full object-cover p-2 sm:-mt-10"
+            />
           </div>
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-shell section-padding bg-white/60">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              Our <span className="text-primary-600">Core Values</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg p-8 shadow-lg text-center card-hover"
-            >
-              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaEye className="text-white text-2xl" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary-800 mb-4 font-display">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To be a leading educational institution that shapes confident, compassionate, 
-                and capable global citizens who contribute positively to society while maintaining 
-                strong moral values and cultural roots.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg p-8 shadow-lg text-center card-hover"
-            >
-              <div className="w-16 h-16 bg-secondary-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaHeart className="text-white text-2xl" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary-800 mb-4 font-display">Our Mission</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To provide quality education that develops critical thinking, creativity, and 
-                character while nurturing each child's unique potential in a safe, supportive, 
-                and inclusive environment that celebrates diversity and promotes lifelong learning.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-lg p-8 shadow-lg text-center card-hover"
-            >
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <FaStar className="text-white text-2xl" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary-800 mb-4 font-display">Our Values</h3>
-              <ul className="text-gray-600 leading-relaxed text-left space-y-2">
-                <li>• Excellence in Education</li>
-                <li>• Integrity and Honesty</li>
-                <li>• Respect and Inclusivity</li>
-                <li>• Innovation and Creativity</li>
-                <li>• Compassion and Empathy</li>
-                <li>• Environmental Responsibility</li>
-              </ul>
-            </motion.div>
+          <SectionHeading
+            eyebrow="Core values"
+            title="The culture of the school is shaped by"
+            highlight="care, clarity, and character."
+            align="center"
+          />
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {values.map((value, index) => (
+              <motion.article
+                key={value.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                viewport={{ once: true, amount: 0.25 }}
+                className="soft-card p-6"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                  <value.icon />
+                </div>
+                <h3 className="mt-5 text-2xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                  {value.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-slate-600">{value.description}</p>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* School Timeline */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              Our <span className="text-primary-600">Journey</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Fifteen years of continuous growth, innovation, and educational excellence.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
+      <section className="section-shell section-padding">
+        <div className="container-custom grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Journey"
+              title="Five years of growth that"
+              highlight="feel grounded, not inflated."
+              description="The timeline matters because it reflects steady trust and school-building work, not exaggerated claims."
+            />
+          </div>
+          <div className="space-y-4">
             {milestones.map((milestone, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                key={milestone.year}
+                initial={{ opacity: 0, x: 24 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`flex items-center mb-8 ${
-                  index % 2 === 0 ? 'justify-start' : 'justify-end'
-                }`}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="soft-card flex items-start gap-5 p-5"
               >
-                <div className={`flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                } max-w-md`}>
-                  <div className="w-4 h-4 bg-primary-600 rounded-full flex-shrink-0"></div>
-                  <div className={`bg-white p-4 rounded-lg shadow-md ${
-                    index % 2 === 0 ? 'ml-4' : 'mr-4'
-                  }`}>
-                    <div className="text-lg font-bold text-primary-600">{milestone.year}</div>
-                    <div className="text-gray-700">{milestone.event}</div>
-                  </div>
-                </div>
+                <div className="font-display text-4xl leading-none text-slate-900">{milestone.year}</div>
+                <p className="pt-2 text-sm leading-7 text-slate-600">{milestone.event}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Faculty Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-shell section-padding bg-white/55">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="heading-primary" style={{ fontFamily: "'Oswald', sans-serif" }}>
-              Our <span className="text-primary-600">Leadership Team</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the dedicated professionals who guide our educational vision and 
-              ensure excellence in every aspect of school life.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {faculty.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+          <SectionHeading
+            eyebrow="Leadership"
+            title="A school identity needs people who"
+            highlight="can hold standards with humanity."
+            description="The leadership team anchors the school’s tone, educational direction, and trust with parents."
+            align="center"
+          />
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {leadership.map((member, index) => (
+              <motion.article
+                key={member.name}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                viewport={{ once: true, amount: 0.25 }}
+                className="soft-card overflow-hidden"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover"
-                />
+                <img src={member.image} alt={member.name} className="h-72 w-full object-cover" />
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-display">
+                  <h3 className="text-2xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
                     {member.name}
                   </h3>
-                  <p className="text-primary-600 font-medium mb-2">{member.position}</p>
-                  <p className="text-gray-600 text-sm mb-1">{member.qualification}</p>
-                  <p className="text-gray-500 text-sm">{member.experience}</p>
+                  <p className="mt-2 text-sm uppercase tracking-[0.16em] text-teal-700" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    {member.role}
+                  </p>
+                  <p className="mt-3 text-sm text-slate-500">{member.experience}</p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Awards and Recognition */}
-      <section className="section-padding bg-primary-600 text-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-5xl font-bold font-display mb-6">
-              Awards & <span className="text-yellow-300">Recognition</span>
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Our commitment to excellence has been recognized by various educational 
-              bodies and organizations.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {awards.map((award, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center"
-              >
-                <FaAward className="text-4xl text-yellow-300 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold">{award}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="heading-secondary mb-6">
-              Ready to Be Part of Our Story?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Join the H.P. Bright Academy family and give your child the foundation 
-              for a bright and successful future.
-            </p>
-
-          </motion.div>
         </div>
       </section>
     </div>

@@ -1,176 +1,179 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaPlay, FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { FaArrowRight, FaMapMarkerAlt, FaPlay, FaStar } from 'react-icons/fa';
+
+const highlights = [
+  {
+    title: 'Small classes, calm rooms',
+    description: 'Students are taught in focused groups where attention is personal and progress stays visible.',
+  },
+  {
+    title: 'Learning that feels alive',
+    description: 'Academics, activity, and values are woven together so school feels rigorous without feeling rigid.',
+  },
+  {
+    title: 'A campus families can trust',
+    description: 'From first visit to final bell, the environment is designed to feel safe, cared for, and clear.',
+  },
+];
+
+const backgroundImages = [
+  `${import.meta.env.BASE_URL}images/Campus/2.jpg`,
+  `${import.meta.env.BASE_URL}images/Activities/6.jpg`,
+  `${import.meta.env.BASE_URL}images/Events/2.jpg`,
+  `${import.meta.env.BASE_URL}images/Activities/5.jpg`,
+];
 
 const Hero = () => {
   const navigate = useNavigate();
-  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Background images from different categories
-  const backgroundImages = [
-    `${import.meta.env.BASE_URL}images/Campus/2.jpg`,
-    `${import.meta.env.BASE_URL}images/Activities/6.jpg`,
-    `${import.meta.env.BASE_URL}images/Campus/1.jpg`,
-    `${import.meta.env.BASE_URL}images/Activities/5.jpg`,
-    `${import.meta.env.BASE_URL}images/Events/2.jpg`,
-  ];
-
-  // Auto-rotate background images
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBgIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
-    }, 5000); // Change every 5 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5200);
 
     return () => clearInterval(interval);
-  }, [backgroundImages.length]);
-
-  const handleAdmissionsClick = () => {
-    navigate('/admissions');
-  };
+  }, []);
 
   const handleVirtualTourClick = () => {
-    // First try to find the gallery section
     const gallerySection = document.getElementById('gallery');
     if (gallerySection) {
       gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      // Fallback: scroll to a reasonable position if gallery not found
-      window.scrollTo({ 
-        top: window.innerHeight * 2, 
-        behavior: 'smooth' 
-      });
     }
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image Slideshow */}
-      <div className="absolute inset-0 z-0">
+    <section className="section-shell relative overflow-hidden px-4 pb-10 pt-4 sm:px-6 lg:px-8 lg:pb-16 lg:pt-6">
+      <div className="container-custom relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-[var(--ink-950)] px-6 py-8 text-white shadow-[0_35px_120px_rgba(15,23,35,0.18)] lg:px-10 lg:py-10">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentBgIndex}
+            key={currentIndex}
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
             className="absolute inset-0"
             style={{
-              backgroundImage: `url(${backgroundImages[currentBgIndex]})`,
+              backgroundImage: `linear-gradient(90deg, rgba(15, 23, 35, 0.88), rgba(15, 23, 35, 0.58) 46%, rgba(15, 118, 110, 0.3)), url(${backgroundImages[currentIndex]})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat'
             }}
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
           />
         </AnimatePresence>
-      </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-primary-900/50 to-black/60 z-10"></div>
+        <div className="ambient-orb -left-10 top-6 h-48 w-48 bg-[#d4a545]/30" />
+        <div className="ambient-orb bottom-8 right-0 h-72 w-72 bg-primary-500/25 animate-float-slow" />
 
-      {/* Floating Decorative Blobs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary-400/20 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none"></div>
-      <div className="absolute bottom-32 right-10 w-96 h-96 bg-secondary-400/15 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-accent-400/15 rounded-full blur-3xl z-10 animate-bounce-gentle pointer-events-none" style={{ animationDelay: '2s' }}></div>
+        <div className="relative z-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div className="max-w-3xl pt-4 lg:pt-8">
+            <span className="eyebrow text-white/82 before:bg-white/35">Next generation school experience</span>
+            <motion.h1
+              initial={{ opacity: 0, y: 26 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.1 }}
+              className="mt-5 font-display text-5xl leading-[0.92] text-white sm:text-6xl lg:text-[5.8rem]"
+            >
+              Bright minds need a school that feels
+              <span className="block text-[#f5d48d]"> thoughtful, warm, and ambitious.</span>
+            </motion.h1>
 
-      {/* Content */}
-      <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
-        <motion.h1 
-          className="text-6xl md:text-8xl font-black mb-6 leading-tight"
-          style={{ fontFamily: "'Oswald', sans-serif" }}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Welcome to{' '}
-          <span className="bg-gradient-to-r from-yellow-300 to-accent-400 bg-clip-text text-transparent">H.P. Bright Academy</span>
-        </motion.h1>
-        
-        <motion.p 
-          className="text-xl md:text-2xl mb-8 leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          Nurturing young minds from Preschool to Class 8 with quality education, 
-          individual attention, and value-based learning in the heart of Varanasi.
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.22 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-white/76 lg:text-xl"
+            >
+              H.P. Bright Academy offers Preschool to Class 8 in Varanasi with a calmer atmosphere, stronger parent trust, and a learning environment built around individual growth instead of crowd management.
+            </motion.p>
 
-        <motion.div 
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <button
-            onClick={handleAdmissionsClick}
-            className="bg-gradient-to-r from-accent-500 to-primary-500 hover:from-accent-600 hover:to-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-            style={{ fontFamily: "'Oswald', sans-serif" }}
-          >
-            <span>Admissions Open</span>
-            <FaArrowRight className="text-sm" />
-          </button>
-          
-          <button
-            onClick={handleVirtualTourClick}
-            className="bg-white/20 backdrop-blur-sm border-2 border-white/70 hover:bg-white hover:text-gray-800 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-            style={{ fontFamily: "'Oswald', sans-serif" }}
-          >
-            <FaPlay className="text-sm" />
-            <span>Virtual Tour</span>
-          </button>
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.34 }}
+              className="mt-8 flex flex-wrap gap-4"
+            >
+              <button onClick={() => navigate('/admissions')} className="btn-primary">
+                Begin Admission Inquiry
+                <FaArrowRight className="text-xs" />
+              </button>
+              <button onClick={handleVirtualTourClick} className="btn-outline border-white/30 bg-white/12 text-white hover:bg-white hover:text-slate-900">
+                <FaPlay className="text-xs" />
+                Explore the Campus
+              </button>
+            </motion.div>
 
-        {/* Key Features */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-yellow-400 shadow-lg">
-            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Expert Teachers</h3>
-            <p className="text-gray-200 text-sm">Qualified and caring educators dedicated to your child's growth</p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.46 }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              <div className="stat-pill">500+ learners</div>
+              <div className="stat-pill">15+ experienced faculty</div>
+              <div className="stat-pill">Preschool to Class 8</div>
+            </motion.div>
           </div>
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-secondary-400 shadow-lg">
-            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Safe Environment</h3>
-            <p className="text-gray-200 text-sm">Secure and nurturing campus for optimal learning</p>
-          </div>
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 text-center border border-white/40 border-t-4 border-t-accent-400 shadow-lg">
-            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Holistic Development</h3>
-            <p className="text-gray-200 text-sm">Academic excellence combined with character building</p>
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Background Image Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-        {backgroundImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBgIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentBgIndex 
-                ? 'bg-white' 
-                : 'bg-white/50 hover:bg-white/75'
-            }`}
-          />
-        ))}
-      </div>
+          <div className="grid gap-4 lg:gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="glass-panel rounded-[1.8rem] p-5 text-slate-900"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-teal-700" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    Campus location
+                  </p>
+                  <h2 className="mt-2 font-display text-4xl leading-none text-slate-900">
+                    Varanasi roots, modern school rhythm.
+                  </h2>
+                </div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-white">
+                  <FaMapMarkerAlt />
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                Chamao Shivpur Tarna, Ganeshpur, Varanasi, Uttar Pradesh 221105.
+              </p>
+            </motion.div>
 
-      {/* Scroll Down Indicator */}
-      <motion.div 
-        className="absolute bottom-8 right-8 text-white z-20"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <div className="flex flex-col items-center">
-          <span className="text-sm mb-2">Scroll Down</span>
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              {highlights.map((item, index) => (
+                <motion.article
+                  key={item.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.65, delay: 0.28 + index * 0.12 }}
+                  className="rounded-[1.6rem] border border-white/12 bg-white/10 p-5 backdrop-blur-md"
+                >
+                  <FaStar className="text-[#f5d48d]" />
+                  <h3 className="mt-4 text-lg font-semibold text-white" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-white/72">{item.description}</p>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
-      </motion.div>
+
+        <div className="relative z-10 mt-8 flex justify-center gap-2 lg:justify-start">
+          {backgroundImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                index === currentIndex ? 'w-10 bg-[#f5d48d]' : 'w-2.5 bg-white/38 hover:bg-white/65'
+              }`}
+              aria-label={`Show slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
