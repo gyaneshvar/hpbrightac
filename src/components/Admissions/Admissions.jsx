@@ -4,6 +4,7 @@ import {
   FaFileAlt, 
   FaCalendarAlt, 
   FaCheckCircle, 
+  FaMoneyBillWave,
   FaPhone, 
   FaEnvelope,
   FaUser,
