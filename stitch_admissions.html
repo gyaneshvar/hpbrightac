@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HP Bright Academy - Admissions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006a63",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#31312c",
+                        "on-background": "#1c1c18",
+                        "primary-fixed": "#9cf2e8",
+                        "inverse-on-surface": "#f3f0ea",
+                        "surface-variant": "#e5e2db",
+                        "on-primary-fixed-variant": "#00504a",
+                        "secondary-fixed": "#ffdf9b",
+                        "outline": "#6e7977",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffe4e4",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-container-low": "#f6f3ec",
+                        "on-surface-variant": "#3e4947",
+                        "on-tertiary-fixed": "#40000c",
+                        "surface-container-highest": "#e5e2db",
+                        "primary-fixed-dim": "#80d5cb",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#a6002f",
+                        "tertiary-fixed": "#ffdada",
+                        "tertiary-fixed-dim": "#ffb3b6",
+                        "on-tertiary-fixed-variant": "#920028",
+                        "on-primary-container": "#a3faef",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e3c37d",
+                        "on-secondary-fixed": "#251a00",
+                        "secondary-container": "#fddc94",
+                        "primary": "#005c55",
+                        "on-surface": "#1c1c18",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0f766e",
+                        "secondary": "#735b20",
+                        "surface-container": "#f0eee7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-container": "#785f24",
+                        "inverse-primary": "#80d5cb",
+                        "outline-variant": "#bdc9c6",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f2",
+                        "surface-bright": "#fcf9f2",
+                        "on-secondary-fixed-variant": "#594409",
+                        "tertiary-container": "#d2093f",
+                        "background": "#fcf9f2",
+                        "surface-dim": "#dcdad3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "container-padding": "2rem",
+                        "stack-sm": "1rem",
+                        "stack-md": "2rem",
+                        "unit": "8px",
+                        "stack-lg": "4rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Lexend"],
+                        "button": ["Lexend"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Lexend"],
+                        "headline-xl": ["Lexend"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md text-body-md antialiased flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <header
+        class="hidden md:flex bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-50 justify-between items-center px-8 py-4 w-full docked full-width top-0 rounded-b-[2rem] border-b-4 border-teal-50/50 shadow-[0_10px_40px_-15px_rgba(15,118,110,0.2)]">
+        <div class="text-2xl font-black text-teal-700 dark:text-teal-400 tracking-tight">HP Bright Academy</div>
+        <nav class="flex gap-4">
+            <a class="font-lexend text-base font-semibold text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300"
+                href="#">Home</a>
+            <a class="font-lexend text-base font-semibold text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300"
+                href="#">About Us</a>
+            <a class="font-lexend text-base font-semibold text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300"
+                href="#">Academics</a>
+            <a class="font-lexend text-base font-semibold text-teal-700 dark:text-teal-300 border-b-4 border-yellow-400 pb-1 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300"
+                href="#">Admissions</a>
+            <a class="font-lexend text-base font-semibold text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300"
+                href="#">Campus Life</a>
+        </nav>
+        <button
+            class="font-button text-button bg-primary text-on-primary rounded-full px-6 py-3 border-b-2 border-primary-container hover:translate-y-[2px] hover:border-b-0 transition-all duration-150 shadow-sm shadow-primary/30">Inquire
+            Now</button>
+    </header>
+    <!-- SideNavBar (Mobile) -->
+    <nav
+        class="md:hidden fixed left-0 top-0 h-screen w-72 z-40 p-6 flex flex-col bg-teal-50 dark:bg-slate-900 rounded-r-[2.5rem] border-r-8 border-teal-100/50 shadow-2xl shadow-teal-900/10">
+        <div class="mb-8 flex flex-col items-start gap-4">
+            <div class="w-16 h-16 rounded-full bg-primary-container overflow-hidden border-2 border-white shadow-sm">
+                <img alt="Academy Mascot" class="w-full h-full object-cover"
+                    data-alt="A bright, cheerful cartoon-style mascot of an owl wearing a graduation cap, set against a soft teal background. The owl has large friendly eyes and is holding a small green leaf. Lighting is soft and colorful, perfectly suited for an educational children's academy brand."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYOTMKIGkMt19shLiVzAnf77GHvhsGgdX1feee-a31sefGiUZd4BrmDS_K4ChWnEo-B-ZTFqbbqwJzw4hZXPMR1nidAhnoa8bvhREfkVx0ulqx2FG6SdT4DKM9ITeEN_qBOY2mXKppCnUlq9gl359PENzYOs1frWaU8X_E8CUM4-oY7C2i86d-tB1KXPmWhZFLGhS42w2DwBAL6lShJQhhv_f9joPzCn3vb5kcnKHZQo3QjxnWHnFkLk44SZbF3rKLvt8YCIgYgyx_" />
+            </div>
+            <div>
+                <h2 class="text-xl font-black text-teal-800 dark:text-teal-200">Bright Academy</h2>
+                <p class="font-lexend text-sm font-bold text-teal-700 dark:text-teal-400 opacity-80">Nurturing Roots</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2 flex-grow divide-y divide-teal-100 dark:divide-teal-900">
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl font-lexend text-sm font-bold text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95"
+                href="#">
+                <span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl font-lexend text-sm font-bold text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95"
+                href="#">
+                <span class="material-symbols-outlined">school</span>
+                About Us
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl font-lexend text-sm font-bold text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95"
+                href="#">
+                <span class="material-symbols-outlined">menu_book</span>
+                Academics
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl font-lexend text-sm font-bold bg-teal-600 text-white rounded-3xl shadow-[0_4px_0_rgb(13,92,86)] hover:translate-x-2 transition-transform duration-200 active:scale-95"
+                href="#">
+                <span class="material-symbols-outlined fill">assignment_ind</span>
+                Admissions
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl font-lexend text-sm font-bold text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95"
+                href="#">
+                <span class="material-symbols-outlined">photo_library</span>
+                Gallery
+            </a>
+        </div>
+        <button
+            class="mt-auto font-button text-button w-full bg-secondary text-on-secondary rounded-full px-6 py-4 border-b-2 border-secondary-container hover:translate-y-[2px] hover:border-b-0 transition-all duration-150 shadow-md shadow-secondary/20">Apply
+            Today</button>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main
+        class="flex-grow flex flex-col md:pl-0 px-container-padding md:px-12 py-stack-lg max-w-[1440px] mx-auto w-full gap-stack-lg overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-6 flex flex-col gap-stack-md z-10">
+                <div
+                    class="inline-flex items-center gap-2 bg-secondary-fixed/50 text-on-secondary-fixed px-4 py-2 rounded-full w-max border border-secondary/20">
+                    <span class="material-symbols-outlined fill text-secondary">star</span>
+                    <span class="font-label-bold text-label-bold">Admissions Open 2026-2027</span>
+                </div>
+                <h1 class="font-headline-xl text-headline-xl text-primary">Join the Bright Academy Family</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">We believe every child is
+                    naturally curious. Our admissions process is simple, transparent, and designed to welcome your
+                    family into our vibrant learning community without the stress.</p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button
+                        class="font-button text-button bg-primary text-on-primary rounded-full px-8 py-4 border-b-2 border-primary-container hover:translate-y-[2px] hover:border-b-0 transition-all duration-150 shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                        Start Application
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button
+                        class="font-button text-button bg-surface text-primary rounded-full px-8 py-4 border-2 border-primary/20 hover:bg-surface-container-low transition-all duration-150 flex items-center justify-center gap-2">
+                        View Prospectus
+                        <span class="material-symbols-outlined">download</span>
+                    </button>
+                </div>
+            </div>
+            <div
+                class="lg:col-span-6 relative rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20 aspect-video lg:aspect-square group">
+                <img alt="Students learning"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    data-alt="A diverse group of young elementary students sitting around a brightly colored circular table in a sunlit classroom. They are actively engaged in a hands-on learning activity with colorful building blocks. The lighting is warm and natural, emphasizing the joyful and curious expressions on their faces. The classroom background is slightly blurred but shows soft pastel educational posters."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuClVyzzE9MUhdG9UCefyO4tQrvWx_fa63Biph1vpsG4BM8RsaTTE40DYBZanjFMr6PAzMGSU9keKWfQqeTl08UnKXuUvgVz5yGtS1QAUGpv0LfhILfRa6QZCtI4xHsJmCTJJsgjEXb-YGaiSpDS1YpF9lFjXOiCWbgkZPica9_Dnj3RajFOe6HHs9q3s9T277JjS9FECeMpJLibiSiMGWI9m3IIfcFbDAe4A2J7uVF4OvLlIChciXIJtAIrbE8y0K9eXKUeLZ-bIjhB" />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-white/50 flex items-center gap-4">
+                        <div
+                            class="bg-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center text-on-secondary-fixed">
+                            <span class="material-symbols-outlined fill">sentiment_satisfied</span>
+                        </div>
+                        <div>
+                            <p class="font-label-bold text-label-bold text-primary">100% Happiness</p>
+                            <p class="font-body-md text-sm text-on-surface-variant">Rated by Parents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 3 Step Process Bento Grid -->
+        <section class="flex flex-col gap-stack-md pt-stack-lg">
+            <div class="text-center max-w-2xl mx-auto flex flex-col gap-4">
+                <h2 class="font-headline-lg text-headline-lg text-primary">A Simple 1-2-3 Process</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">We've designed our enrollment to be as
+                    friendly as our classrooms. No confusing paperwork, just three easy steps to joining our community.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <!-- Step 1 -->
+                <div
+                    class="bg-surface-container-lowest border-2 border-surface-variant rounded-2xl p-8 relative shadow-lg shadow-surface-variant/50 hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="absolute -top-6 -left-6 bg-secondary text-on-secondary w-12 h-12 rounded-full flex items-center justify-center font-headline-md text-headline-md shadow-md border-2 border-white">
+                        1</div>
+                    <div
+                        class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center text-on-primary-fixed-variant mb-6">
+                        <span class="material-symbols-outlined text-3xl">waving_hand</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-3">Say Hello</h3>
+                    <p class="font-body-md text-on-surface-variant">Fill out our quick inquiry form below. Tell us a bit
+                        about your child and what you are looking for in a school.</p>
+                </div>
+                <!-- Step 2 -->
+                <div
+                    class="bg-surface-container-lowest border-2 border-surface-variant rounded-2xl p-8 relative shadow-lg shadow-surface-variant/50 hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="absolute -top-6 -left-6 bg-secondary text-on-secondary w-12 h-12 rounded-full flex items-center justify-center font-headline-md text-headline-md shadow-md border-2 border-white">
+                        2</div>
+                    <div
+                        class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center text-on-tertiary-fixed-variant mb-6">
+                        <span class="material-symbols-outlined text-3xl">local_cafe</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-3">Meet &amp; Greet</h3>
+                    <p class="font-body-md text-on-surface-variant">Schedule a casual campus tour. Let your child
+                        explore while we chat over coffee about our educational philosophy.</p>
+                </div>
+                <!-- Step 3 -->
+                <div
+                    class="bg-surface-container-lowest border-2 border-surface-variant rounded-2xl p-8 relative shadow-lg shadow-surface-variant/50 hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="absolute -top-6 -left-6 bg-secondary text-on-secondary w-12 h-12 rounded-full flex items-center justify-center font-headline-md text-headline-md shadow-md border-2 border-white">
+                        3</div>
+                    <div
+                        class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center text-on-secondary-fixed-variant mb-6">
+                        <span class="material-symbols-outlined text-3xl">celebration</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl text-primary mb-3">Welcome Home</h3>
+                    <p class="font-body-md text-on-surface-variant">Complete the final registration details and secure
+                        your spot. We'll handle the rest and prepare a special welcome kit!</p>
+                </div>
+            </div>
+        </section>
+        <!-- Fee Structure -->
+        <section
+            class="bg-surface-container-low rounded-[2.5rem] p-8 md:p-12 mt-stack-lg border border-surface-variant shadow-inner">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-1/3 flex flex-col gap-6">
+                    <div
+                        class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-sm text-primary">
+                        <span class="material-symbols-outlined text-3xl">payments</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg text-primary">Transparent Fees</h2>
+                    <p class="font-body-md text-on-surface-variant">We believe in complete transparency. No hidden
+                        costs, no surprise materials fees. What you see is the complete investment in your child's
+                        future.</p>
+                    <div class="bg-secondary-fixed/30 p-6 rounded-2xl border border-secondary/20 mt-4">
+                        <h4 class="font-label-bold text-secondary mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">info</span>
+                            Financial Aid Available
+                        </h4>
+                        <p class="text-sm font-body-md text-on-surface-variant">We offer needs-based scholarships. Ask
+                            about our assistance programs during your tour.</p>
+                    </div>
+                </div>
+                <div
+                    class="md:w-2/3 w-full bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-variant">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-primary text-on-primary">
+                                    <th class="p-4 font-label-bold text-label-bold border-b border-primary-container">
+                                        Program</th>
+                                    <th class="p-4 font-label-bold text-label-bold border-b border-primary-container">
+                                        Term Fee</th>
+                                    <th class="p-4 font-label-bold text-label-bold border-b border-primary-container">
+                                        Annual Value</th>
+                                    <th class="p-4 font-label-bold text-label-bold border-b border-primary-container">
+                                        Includes</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-surface-variant font-body-md">
+                                <tr class="hover:bg-surface-container transition-colors">
+                                    <td class="p-4 text-primary font-bold">Early Years (Pre-K)</td>
+                                    <td class="p-4 text-on-surface-variant">$2,500</td>
+                                    <td class="p-4 text-on-surface-variant">$7,000 <span
+                                            class="text-xs text-outline line-through">$7,500</span></td>
+                                    <td class="p-4 text-sm text-on-surface-variant">All art supplies, daily healthy
+                                        snacks.</td>
+                                </tr>
+                                <tr class="hover:bg-surface-container transition-colors">
+                                    <td class="p-4 text-primary font-bold">Primary (Grades 1-3)</td>
+                                    <td class="p-4 text-on-surface-variant">$3,200</td>
+                                    <td class="p-4 text-on-surface-variant">$9,000 <span
+                                            class="text-xs text-outline line-through">$9,600</span></td>
+                                    <td class="p-4 text-sm text-on-surface-variant">Textbooks, local field trips, tech
+                                        fee.</td>
+                                </tr>
+                                <tr class="hover:bg-surface-container transition-colors">
+                                    <td class="p-4 text-primary font-bold">Middle (Grades 4-6)</td>
+                                    <td class="p-4 text-on-surface-variant">$3,800</td>
+                                    <td class="p-4 text-on-surface-variant">$10,800 <span
+                                            class="text-xs text-outline line-through">$11,400</span></td>
+                                    <td class="p-4 text-sm text-on-surface-variant">1:1 Device program, sports
+                                        equipment.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Inquiry Form -->
+        <section
+            class="max-w-3xl mx-auto w-full mt-stack-lg bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_-12px_rgba(0,92,85,0.1)] border-2 border-surface-variant relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-30 z-0">
+            </div>
+            <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary-fixed rounded-full blur-3xl opacity-30 z-0">
+            </div>
+            <div class="relative z-10">
+                <div class="text-center mb-10">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-3">Let's Get Started</h2>
+                    <p class="font-body-md text-on-surface-variant">Drop us a line and our admissions friendly team will
+                        reach out within 24 hours.</p>
+                </div>
+                <form class="flex flex-col gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-bold text-label-bold text-primary" for="parentName">Parent/Guardian
+                                Name</label>
+                            <input
+                                class="w-full rounded-xl border-2 border-surface-variant bg-surface px-4 py-4 font-body-md text-on-surface focus:border-secondary focus:ring-4 focus:ring-secondary/20 focus:outline-none transition-all placeholder:text-outline"
+                                id="parentName" placeholder="Jane Doe" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-bold text-label-bold text-primary" for="email">Email
+                                Address</label>
+                            <input
+                                class="w-full rounded-xl border-2 border-surface-variant bg-surface px-4 py-4 font-body-md text-on-surface focus:border-secondary focus:ring-4 focus:ring-secondary/20 focus:outline-none transition-all placeholder:text-outline"
+                                id="email" placeholder="jane@example.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-bold text-label-bold text-primary" for="childName">Child's First
+                                Name</label>
+                            <input
+                                class="w-full rounded-xl border-2 border-surface-variant bg-surface px-4 py-4 font-body-md text-on-surface focus:border-secondary focus:ring-4 focus:ring-secondary/20 focus:outline-none transition-all placeholder:text-outline"
+                                id="childName" placeholder="Leo" type="text" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="font-label-bold text-label-bold text-primary" for="grade">Grade of
+                                Interest</label>
+                            <select
+                                class="w-full rounded-xl border-2 border-surface-variant bg-surface px-4 py-4 font-body-md text-on-surface focus:border-secondary focus:ring-4 focus:ring-secondary/20 focus:outline-none transition-all appearance-none cursor-pointer"
+                                id="grade">
+                                <option disabled="" selected="" value="">Select a grade...</option>
+                                <option value="prek">Early Years (Pre-K)</option>
+                                <option value="1">Grade 1</option>
+                                <option value="2">Grade 2</option>
+                                <option value="3">Grade 3</option>
+                                <option value="4">Grade 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-bold text-label-bold text-primary" for="message">Anything else we
+                            should know? (Optional)</label>
+                        <textarea
+                            class="w-full rounded-xl border-2 border-surface-variant bg-surface px-4 py-4 font-body-md text-on-surface focus:border-secondary focus:ring-4 focus:ring-secondary/20 focus:outline-none transition-all resize-none placeholder:text-outline"
+                            id="message" placeholder="Leo loves dinosaurs and building blocks..." rows="4"></textarea>
+                    </div>
+                    <button
+                        class="mt-4 font-button text-button w-full bg-secondary text-on-secondary rounded-full px-8 py-5 border-b-4 border-secondary-container hover:translate-y-[2px] hover:border-b-2 active:border-b-0 active:translate-y-[4px] transition-all duration-150 shadow-xl shadow-secondary/30 flex justify-center items-center gap-2 text-lg"
+                        type="button">
+                        Send Inquiry
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                    <p class="text-center text-xs text-outline mt-2 font-body-md">By submitting, you agree to our
+                        privacy policy. We protect your data like our own.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full py-16 px-12 flex flex-col md:flex-row justify-between items-center gap-8 bg-teal-900 dark:bg-black rounded-t-[4rem] mt-16 border-t-2 border-teal-800 shadow-none relative z-50">
+        <div class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="material-symbols-outlined fill text-secondary-fixed">school</span>
+            HP Bright Academy
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a class="font-lexend text-sm text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform"
+                href="#">Privacy Policy</a>
+            <a class="font-lexend text-sm text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform"
+                href="#">Staff Portal</a>
+            <a class="font-lexend text-sm text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform"
+                href="#">Terms of Service</a>
+            <a class="font-lexend text-sm text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform"
+                href="#">Contact Us</a>
+        </div>
+        <div class="font-lexend text-sm text-teal-200/60 text-center md:text-right">
+            © 2024 HP Bright Academy. Where curiosity meets excellence.
+        </div>
+    </footer>
+</body>
+
+</html>

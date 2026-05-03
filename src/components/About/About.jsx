@@ -1,228 +1,143 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { FaArrowRight, FaEye, FaHeart, FaLeaf, FaShieldAlt, FaStar } from 'react-icons/fa';
-import PageHero from '../shared/PageHero';
-import SectionHeading from '../shared/SectionHeading';
-
-const milestones = [
-  { year: '2019', event: 'The school begins its journey with a vision for a calmer, values-first education.' },
-  { year: '2020', event: 'Foundational early-years programs deepen with stronger parent-school communication.' },
-  { year: '2021', event: 'Academic offerings expand steadily through upper classes and wider student support.' },
-  { year: '2022', event: 'Teaching spaces and classroom methods are strengthened with more modern tools.' },
-  { year: '2023', event: 'The school earns stronger recognition locally for its discipline and learning culture.' },
-  { year: '2024', event: 'Campus presentation, activity-led learning, and school identity continue to mature.' },
-  { year: '2025', event: 'H.P. Bright Academy completes five years of trust with growing community confidence.' },
-];
-
-const leadership = [
-  {
-    name: 'Mrs. Pooja Verma',
-    role: 'Principal',
-    experience: '12+ years in education',
-    image: `${import.meta.env.BASE_URL}images/AboutUs/principal.png`,
-  },
-  {
-    name: 'Mr. Ravi Prakash Singh',
-    role: 'Co-Founder & Head of Academics',
-    experience: '15+ years in academics',
-    image: `${import.meta.env.BASE_URL}images/AboutUs/coordinator.png`,
-  },
-  {
-    name: 'Mr. Shambhu Narayan',
-    role: 'Chairman',
-    experience: '35+ years of leadership',
-    image: `${import.meta.env.BASE_URL}images/AboutUs/chairman.jpg`,
-  },
-];
-
-const values = [
-  {
-    icon: FaEye,
-    title: 'Vision with discipline',
-    description: 'Students are encouraged to think ahead while staying rooted in strong habits and respectful conduct.',
-  },
-  {
-    icon: FaHeart,
-    title: 'Care with accountability',
-    description: 'Warmth matters, but so does structure. The school aims to offer both at the same time.',
-  },
-  {
-    icon: FaLeaf,
-    title: 'Growth that feels balanced',
-    description: 'Academic learning, creativity, and behaviour are developed together instead of in isolation.',
-  },
-  {
-    icon: FaShieldAlt,
-    title: 'Trust families can feel',
-    description: 'Parents should feel that the campus is safe, serious, and genuinely invested in their child.',
-  },
-];
 
 const About = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen">
-      <PageHero
-        eyebrow="About the institution"
-        title="A school built to feel"
-        highlight="personal, steady, and ambitious."
-        description="H.P. Bright Academy serves Preschool to Class 8 in Varanasi with a philosophy centered on individual attention, disciplined learning, and a campus atmosphere families can trust."
-        image={`${import.meta.env.BASE_URL}images/Campus/1.jpg`}
-        imageAlt="H.P. Bright Academy campus"
-        stats={[
-          { value: '2019', label: 'founded' },
-          { value: '500+', label: 'students served' },
-          { value: '15+', label: 'faculty members' },
-        ]}
-        actions={
-          <>
-            <button onClick={() => navigate('/admissions')} className="btn-primary">
-              Explore Admissions
-              <FaArrowRight className="text-xs" />
-            </button>
-            <button onClick={() => navigate('/contact')} className="btn-outline border-white/30 bg-white/12 text-white hover:bg-white hover:text-slate-900">
-              Visit the Campus
-            </button>
-          </>
-        }
-      />
-
-      <section className="section-shell section-padding">
-        <div className="container-custom grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div>
-            <SectionHeading
-              eyebrow="School story"
-              title="The school grew by staying close to"
-              highlight="what families actually need."
-              description="That means clear teaching, safer routines, and an environment where children are guided with attention instead of getting lost inside a crowd."
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="px-container-padding py-stack-lg max-w-7xl mx-auto mt-stack-md">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-stack-md items-center">
+          <div className="space-y-stack-sm pr-lg-8">
+            <div className="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed font-label-bold text-label-bold px-4 py-2 rounded-full mb-4">
+              <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
+              Our Story
+            </div>
+            <h1 className="font-headline-xl text-headline-xl text-primary mb-6">Where Curiosity<br/>Meets Excellence.</h1>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-6">
+              At HP Bright Academy, we believe that education isn't just about absorbing facts; it's about igniting a lifelong love for learning. Our tactile, joy-centered approach ensures every child finds their unique path.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary-fixed rounded-[3rem] transform rotate-3 scale-105 opacity-50 z-0"></div>
+            <img 
+              alt="Children playing" 
+              className="relative z-10 w-full h-[500px] object-cover rounded-[3rem] shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] border-4 border-surface-container-lowest" 
+              src={import.meta.env.BASE_URL + "images/Campus/1.jpg"}
             />
-            <div className="mt-8 space-y-5 text-body">
-              <p>
-                H.P. Bright Academy was established to give local families a more thoughtful school option: one that respects academic foundations, values-based development, and the emotional comfort children need in their early years.
-              </p>
-              <p>
-                Over time, the institution has grown in both scale and maturity. What matters most is that the school experience still feels personal. Teachers remain visible, communication stays direct, and students are encouraged to build confidence with consistency.
-              </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bento Grid Mission Section */}
+      <section className="px-container-padding py-stack-lg bg-surface-container-low">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-stack-md">
+            <h2 className="font-headline-lg text-headline-lg text-primary mb-12">Our Mission & Values</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            {/* Large Feature Box */}
+            <div className="md:col-span-2 bg-primary text-on-primary rounded-[2.5rem] p-10 shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] flex flex-col justify-center relative overflow-hidden">
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary-container rounded-full opacity-50"></div>
+              <div className="relative z-10">
+                <span className="material-symbols-outlined text-5xl mb-6 text-primary-fixed" style={{ fontVariationSettings: "'FILL' 1" }}>explore</span>
+                <h3 className="font-headline-md text-headline-md mb-4">Nurturing Boundless Curiosity</h3>
+                <p className="font-body-lg text-body-lg text-inverse-on-surface opacity-90 max-w-xl">
+                  We provide a safe, vibrant environment where asking questions is celebrated as much as finding answers. Our curriculum is designed to feel like play, fostering deep, meaningful engagement.
+                </p>
+              </div>
+            </div>
+            {/* Small Value Box 1 */}
+            <div className="bg-secondary-fixed text-on-secondary-fixed rounded-[2.5rem] p-8 shadow-[0_10px_40px_-10px_rgba(255,223,155,0.4)] flex flex-col items-start justify-center">
+              <div className="bg-surface-container-lowest p-3 rounded-2xl mb-4 shadow-sm">
+                <span className="material-symbols-outlined text-secondary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span>
+              </div>
+              <h4 className="font-headline-md text-headline-md text-lg mb-2">Empathetic Community</h4>
+              <p className="font-body-md text-body-md opacity-80">Building strong, supportive roots through kindness and respect.</p>
+            </div>
+            {/* Small Value Box 2 */}
+            <div className="bg-surface-container-lowest text-on-surface rounded-[2.5rem] p-8 shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] flex flex-col items-start justify-center border-2 border-surface-variant mt-8 md:mt-0">
+              <div className="bg-primary-fixed p-3 rounded-2xl mb-4 shadow-sm text-primary">
+                <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>lightbulb</span>
+              </div>
+              <h4 className="font-headline-md text-headline-md text-lg text-primary mb-2">Innovative Thinking</h4>
+              <p className="font-body-md text-body-md text-on-surface-variant">Encouraging creative problem solving with modern tools.</p>
+            </div>
+            {/* Medium Image Box */}
+            <div className="md:col-span-2 bg-surface-container-lowest rounded-[2.5rem] overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] relative mt-8 md:mt-0">
+              <img 
+                alt="Creative learning tools" 
+                className="w-full h-full object-cover min-h-[250px]" 
+                src={import.meta.env.BASE_URL + "images/Activities/6.jpg"}
+              />
             </div>
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <img
-              src={`${import.meta.env.BASE_URL}images/Activities/4.jpg`}
-              alt="Students in class"
-              className="soft-card h-56 w-full object-cover p-2"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}images/Events/1.jpg`}
-              alt="School event"
-              className="soft-card h-56 w-full object-cover p-2 sm:mt-10"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}images/Campus/2.jpg`}
-              alt="School campus view"
-              className="soft-card h-56 w-full object-cover p-2"
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}images/Activities/6.jpg`}
-              alt="Students participating in activity"
-              className="soft-card h-56 w-full object-cover p-2 sm:-mt-10"
-            />
-          </div>
         </div>
       </section>
 
-      <section className="section-shell section-padding bg-white/60">
-        <div className="container-custom">
-          <SectionHeading
-            eyebrow="Core values"
-            title="The culture of the school is shaped by"
-            highlight="care, clarity, and character."
-            align="center"
-          />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {values.map((value, index) => (
-              <motion.article
-                key={value.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: index * 0.08 }}
-                viewport={{ once: true, amount: 0.25 }}
-                className="soft-card p-6"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                  <value.icon />
+      {/* Principal's Message */}
+      <section className="px-container-padding py-stack-lg max-w-7xl mx-auto mt-16">
+        <div className="bg-surface-container-lowest rounded-[3rem] border-2 border-surface-variant p-8 md:p-12 shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-stack-sm items-center">
+            <div className="md:col-span-4 flex justify-center md:justify-start relative">
+              <div className="absolute inset-0 bg-secondary-fixed rounded-full transform translate-x-4 translate-y-4 -z-10"></div>
+              <img 
+                alt="Principal Pooja Verma" 
+                className="w-64 h-64 object-cover rounded-full border-8 border-surface-container-lowest shadow-lg z-10" 
+                src={import.meta.env.BASE_URL + "images/AboutUs/principal.png"}
+              />
+            </div>
+            <div className="md:col-span-8 relative pl-md-8 mt-12 md:mt-0">
+              <span className="material-symbols-outlined text-primary-fixed opacity-30 text-8xl absolute -top-12 -left-4 md:-left-8 z-0" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
+              <div className="relative z-10 space-y-6">
+                <h2 className="font-headline-lg text-headline-lg text-primary">A Message from the Principal</h2>
+                <p className="font-body-lg text-body-lg text-on-surface-variant italic">
+                  "Welcome to HP Bright Academy. When we opened our doors, our vision was simple: to create a space where children sprint into the building every morning, eager to discover what the day holds. We blend foundational academics with a deeply tactile, playful approach because we know that joyful learners are successful learners. We are so excited to partner with your family on this incredible journey."
+                </p>
+                <div>
+                  <h4 className="font-headline-md text-headline-md text-lg text-primary mb-1">Mrs. Pooja Verma</h4>
+                  <p className="font-body-md text-body-md text-on-surface-variant text-sm">Principal & Lead Educator</p>
                 </div>
-                <h3 className="mt-5 text-2xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                  {value.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{value.description}</p>
-              </motion.article>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section-shell section-padding">
-        <div className="container-custom grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <SectionHeading
-              eyebrow="Journey"
-              title="Five years of growth that"
-              highlight="feel grounded, not inflated."
-              description="The timeline matters because it reflects steady trust and school-building work, not exaggerated claims."
-            />
+      {/* Modern Roots Philosophy */}
+      <section className="px-container-padding py-stack-lg bg-surface-container-low mt-stack-md mb-32">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-stack-md max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-4 py-2 rounded-full mb-6">
+              <span className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>psychology</span>
+              Pedagogy
+            </div>
+            <h2 className="font-headline-lg text-headline-lg text-primary mb-4">The "Modern Roots" Philosophy</h2>
+            <p className="font-body-md text-body-md text-on-surface-variant mb-12">We anchor our students in timeless values while equipping them with modern tools for a rapidly changing world.</p>
           </div>
-          <div className="space-y-4">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.06 }}
-                viewport={{ once: true, amount: 0.3 }}
-                className="soft-card flex items-start gap-5 p-5"
-              >
-                <div className="font-display text-4xl leading-none text-slate-900">{milestone.year}</div>
-                <p className="pt-2 text-sm leading-7 text-slate-600">{milestone.event}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-shell section-padding bg-white/55">
-        <div className="container-custom">
-          <SectionHeading
-            eyebrow="Leadership"
-            title="A school identity needs people who"
-            highlight="can hold standards with humanity."
-            description="The leadership team anchors the school’s tone, educational direction, and trust with parents."
-            align="center"
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {leadership.map((member, index) => (
-              <motion.article
-                key={member.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: index * 0.08 }}
-                viewport={{ once: true, amount: 0.25 }}
-                className="soft-card overflow-hidden"
-              >
-                <img src={member.image} alt={member.name} className="h-72 w-full object-cover" />
-                <div className="p-6 text-center">
-                  <h3 className="text-2xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                    {member.name}
-                  </h3>
-                  <p className="mt-2 text-sm uppercase tracking-[0.16em] text-teal-700" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                    {member.role}
-                  </p>
-                  <p className="mt-3 text-sm text-slate-500">{member.experience}</p>
-                </div>
-              </motion.article>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            {/* Phil 1 */}
+            <div className="bg-surface-container-lowest rounded-[2rem] p-8 text-center shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] border border-surface-variant hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto bg-primary text-on-primary rounded-[1.5rem] flex items-center justify-center mb-6 transform rotate-3">
+                <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>park</span>
+              </div>
+              <h3 className="font-headline-md text-headline-md text-xl text-primary mb-3">Deep Foundations</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant">Mastery of core subjects through structured, yet engaging methodologies that build confidence.</p>
+            </div>
+            {/* Phil 2 */}
+            <div className="bg-surface-container-lowest rounded-[2rem] p-8 text-center shadow-[0_10px_40px_-10px_rgba(255,223,155,0.4)] border border-surface-variant hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto bg-secondary-fixed text-on-secondary-fixed rounded-[1.5rem] flex items-center justify-center mb-6 transform -rotate-3">
+                <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>extension</span>
+              </div>
+              <h3 className="font-headline-md text-headline-md text-xl text-primary mb-3">Tactile Learning</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant">Moving beyond screens. We emphasize physical play, building, and hands-on experimentation.</p>
+            </div>
+            {/* Phil 3 */}
+            <div className="bg-surface-container-lowest rounded-[2rem] p-8 text-center shadow-[0_10px_40px_-10px_rgba(0,92,85,0.25)] border border-surface-variant hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto bg-primary-fixed text-primary rounded-[1.5rem] flex items-center justify-center mb-6 transform rotate-6">
+                <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>rocket_launch</span>
+              </div>
+              <h3 className="font-headline-md text-headline-md text-xl text-primary mb-3">Future Ready</h3>
+              <p className="font-body-md text-body-md text-on-surface-variant">Integrating digital literacy gracefully, ensuring technology acts as a tool for creation, not consumption.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academics - HP Bright Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#006a63",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#31312c",
+                        "on-background": "#1c1c18",
+                        "primary-fixed": "#9cf2e8",
+                        "inverse-on-surface": "#f3f0ea",
+                        "surface-variant": "#e5e2db",
+                        "on-primary-fixed-variant": "#00504a",
+                        "secondary-fixed": "#ffdf9b",
+                        "outline": "#6e7977",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffe4e4",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-container-low": "#f6f3ec",
+                        "on-surface-variant": "#3e4947",
+                        "on-tertiary-fixed": "#40000c",
+                        "surface-container-highest": "#e5e2db",
+                        "primary-fixed-dim": "#80d5cb",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#a6002f",
+                        "tertiary-fixed": "#ffdada",
+                        "tertiary-fixed-dim": "#ffb3b6",
+                        "on-tertiary-fixed-variant": "#920028",
+                        "on-primary-container": "#a3faef",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e3c37d",
+                        "on-secondary-fixed": "#251a00",
+                        "secondary-container": "#fddc94",
+                        "primary": "#005c55",
+                        "on-surface": "#1c1c18",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0f766e",
+                        "secondary": "#735b20",
+                        "surface-container": "#f0eee7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00201d",
+                        "on-secondary-container": "#785f24",
+                        "inverse-primary": "#80d5cb",
+                        "outline-variant": "#bdc9c6",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f2",
+                        "surface-bright": "#fcf9f2",
+                        "on-secondary-fixed-variant": "#594409",
+                        "tertiary-container": "#d2093f",
+                        "background": "#fcf9f2",
+                        "surface-dim": "#dcdad3"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "1.5rem",
+                        "container-padding": "2rem",
+                        "stack-sm": "1rem",
+                        "stack-md": "2rem",
+                        "unit": "8px",
+                        "stack-lg": "4rem"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Lexend"],
+                        "button": ["Lexend"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Lexend"],
+                        "headline-xl": ["Lexend"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "button": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center px-8 py-4 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md w-full top-0 rounded-b-[2rem] border-b-4 border-teal-50 dark:border-teal-950 shadow-[0_10px_40px_-15px_rgba(15,118,110,0.2)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-teal-700 dark:text-teal-400 text-3xl material-symbols-fill">auto_awesome</span>
+<span class="text-2xl font-black text-teal-700 dark:text-teal-400 tracking-tight">HP Bright Academy</span>
+</div>
+<div class="hidden md:flex items-center gap-2 font-lexend text-base font-semibold">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Home</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">About Us</a>
+<a class="text-teal-700 dark:text-teal-300 border-b-4 border-yellow-400 pb-1 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Academics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Admissions</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Campus Life</a>
+</div>
+<button class="bg-teal-600 text-white font-lexend font-semibold rounded-full px-6 py-2.5 border-b-2 border-teal-800 hover:bg-teal-700 active:translate-y-[2px] active:border-b-0 transition-all duration-150">
+            Inquire Now
+        </button>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col w-full max-w-7xl mx-auto px-container-padding py-stack-md gap-stack-lg">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-gutter pt-stack-sm">
+<div class="flex-1 space-y-stack-sm">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-bold text-label-bold">
+<span class="material-symbols-outlined text-lg">explore</span>
+                    Learning Journey
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-primary">Discover the Joy of Learning</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Our curriculum is designed to spark boundless curiosity. From playful early years to foundational primary and exploratory middle school, we nurture bright minds every step of the way.
+                </p>
+</div>
+<div class="flex-1 relative">
+<div class="absolute inset-0 bg-primary-fixed rounded-[3rem] rotate-3 scale-105 opacity-50 blur-xl"></div>
+<img alt="Students learning together" class="relative w-full h-[400px] object-cover rounded-[3rem] border-4 border-surface-container-lowest shadow-[0_20px_60px_rgba(0,92,85,0.15)]" data-alt="A bright, cheerful elementary school classroom flooded with natural sunlight. Happy young children are engaged in a hands-on learning activity at colorful circular tables. The aesthetic is tactile and playful, with soft pastel colors, educational toys, and colorful artwork on the walls. High-key lighting creates a modern, optimistic light-mode atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhwTIVsTSp55tdaxA1DJ4rxPw_3W-FrfyRpHzoVixr49kv7o9WJcHp3RF9NSsl98xBjzCZVeKenB3ioVnitdU8-NAXyrkOFovEpLHBGPYQQgrDVCxaEmAQ4hzkOyUrija-9qZKt9upjSjjygufAwAKdtSGJljhpeZSG7PM2INyVpbZLXQglJYt-1Hf_hBlOYf590ZjN8wA5yfw34wnzI3QXnsVZX0SrIu0x5-el2mmcOGBVhq3syt_tmo71mLDII66_L9tVJIiUkyQ"/>
+</div>
+</section>
+<!-- Preschool Section -->
+<section class="space-y-stack-md relative">
+<div class="absolute -left-10 top-10 w-32 h-32 bg-secondary-fixed rounded-full blur-3xl opacity-40 -z-10"></div>
+<div class="text-center space-y-4 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary">Preschool (Early Years)</h2>
+<p class="text-on-surface-variant">A magical environment where learning feels like play, focusing on emotional, social, and physical development.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shadow-inner">
+<span class="material-symbols-outlined text-3xl material-symbols-fill">extension</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Play-Based Discovery</h3>
+<p class="text-on-surface-variant">Hands-on activities that build cognitive skills and encourage natural curiosity.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-inner">
+<span class="material-symbols-outlined text-3xl material-symbols-fill">diversity_3</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Social Growth</h3>
+<p class="text-on-surface-variant">Learning to share, communicate, and build meaningful friendships in a safe space.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-inner">
+<span class="material-symbols-outlined text-3xl material-symbols-fill">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Creative Expression</h3>
+<p class="text-on-surface-variant">Art, music, and movement to help tiny hands and minds express big ideas.</p>
+</div>
+</div>
+</section>
+<!-- Primary School (Bento Grid) -->
+<section class="space-y-stack-md bg-surface-container-low p-stack-md rounded-[3rem] shadow-[inset_0_4px_20px_rgba(0,0,0,0.02)] border border-white">
+<div class="flex justify-between items-end mb-6">
+<div class="space-y-2">
+<h2 class="font-headline-lg text-headline-lg text-primary">Primary School</h2>
+<p class="text-on-surface-variant font-label-bold text-label-bold uppercase tracking-wider">Classes 1 to 5</p>
+</div>
+<button class="hidden md:flex items-center gap-2 font-button text-button text-primary hover:text-primary-container transition-colors">
+                    View Syllabus <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter min-h-[500px]">
+<!-- Large Feature Cell -->
+<div class="md:col-span-2 md:row-span-2 bg-primary text-on-primary rounded-[2rem] p-8 flex flex-col justify-between shadow-[0_12px_40px_rgba(0,92,85,0.3)] relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 w-64 h-64 bg-primary-container rounded-full blur-3xl opacity-50"></div>
+<div class="relative z-10 space-y-4">
+<span class="material-symbols-outlined text-5xl material-symbols-fill text-secondary-fixed">calculate</span>
+<h3 class="font-headline-lg text-headline-lg">Core Foundation</h3>
+<p class="text-primary-fixed-dim max-w-sm">Building strong roots in Mathematics and Language Arts through interactive, real-world problem solving.</p>
+</div>
+<div class="relative z-10 mt-8 flex flex-wrap gap-2">
+<span class="bg-on-primary/10 text-on-primary px-4 py-2 rounded-full font-label-bold text-label-bold backdrop-blur-sm">Mathematics</span>
+<span class="bg-on-primary/10 text-on-primary px-4 py-2 rounded-full font-label-bold text-label-bold backdrop-blur-sm">Reading &amp; Writing</span>
+</div>
+</div>
+<!-- Small Cell 1 -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-[2rem] p-6 border border-outline-variant flex items-center gap-6 shadow-sm hover:bg-surface transition-colors">
+<div class="w-16 h-16 rounded-[1rem] bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl text-secondary material-symbols-fill">biotech</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">General Science</h4>
+<p class="text-on-surface-variant text-sm">Exploring nature and basic physics through fun experiments.</p>
+</div>
+</div>
+<!-- Small Cell 2 -->
+<div class="bg-tertiary-fixed rounded-[2rem] p-6 flex flex-col justify-between shadow-sm">
+<span class="material-symbols-outlined text-3xl text-tertiary material-symbols-fill">public</span>
+<h4 class="font-headline-md text-headline-md text-on-tertiary-container mt-4">Social Studies</h4>
+</div>
+<!-- Small Cell 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-[2rem] p-6 flex flex-col justify-between shadow-sm">
+<span class="material-symbols-outlined text-3xl text-primary material-symbols-fill">sports_basketball</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mt-4">Physical Ed.</h4>
+</div>
+</div>
+</section>
+<!-- Middle School Section -->
+<section class="space-y-stack-md py-stack-sm">
+<div class="text-center space-y-4 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary">Middle School (Classes 6-8)</h2>
+<p class="text-on-surface-variant">Fostering independence, critical thinking, and advanced technological literacy to prepare students for the future.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2.5rem] border border-outline-variant shadow-lg relative overflow-hidden">
+<div class="absolute right-0 bottom-0 w-40 h-40 bg-surface-container rounded-tl-full -z-10"></div>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary-fixed rounded-2xl">
+<span class="material-symbols-outlined text-on-primary-fixed-variant material-symbols-fill">computer</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Advanced Academics</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Introduction to Computer Science &amp; Coding</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Applied Mathematics and Algebra basics</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Laboratory Sciences (Physics, Chemistry, Bio)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex-1 bg-secondary-fixed p-8 rounded-[2.5rem] shadow-[0_10px_30px_rgba(255,223,155,0.4)] relative overflow-hidden flex flex-col justify-center">
+<div class="absolute -left-10 -top-10 w-32 h-32 bg-white rounded-full opacity-30 blur-2xl -z-10"></div>
+<h3 class="font-headline-lg text-headline-lg text-on-secondary-fixed mb-4">Clubs &amp; Electives</h3>
+<p class="text-on-secondary-fixed-variant mb-6">Students can choose from Robotics, Debate Team, Advanced Art, and Drama to discover their unique passions.</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white/50 px-4 py-2 rounded-full font-label-bold text-on-secondary-fixed-variant">Robotics</span>
+<span class="bg-white/50 px-4 py-2 rounded-full font-label-bold text-on-secondary-fixed-variant">Debate</span>
+<span class="bg-white/50 px-4 py-2 rounded-full font-label-bold text-on-secondary-fixed-variant">Drama</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-teal-900 dark:bg-black w-full py-16 px-12 flex flex-col md:flex-row justify-between items-center gap-8 rounded-t-[4rem] mt-16 border-t-2 border-teal-800">
+<div class="text-xl font-bold text-white font-lexend flex items-center gap-2">
+<span class="material-symbols-outlined material-symbols-fill text-teal-400">auto_awesome</span>
+            HP Bright Academy
+        </div>
+<div class="flex flex-wrap justify-center gap-6 font-lexend text-sm">
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Privacy Policy</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Staff Portal</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Terms of Service</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Contact Us</a>
+</div>
+<div class="text-teal-400 font-lexend text-sm text-center md:text-right">
+            © 2024 HP Bright Academy. Where curiosity meets excellence.
+        </div>
+</footer>
+</body></html>

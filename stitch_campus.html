@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HP Bright Academy - Campus Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#006a63",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "on-background": "#1c1c18",
+                    "primary-fixed": "#9cf2e8",
+                    "inverse-on-surface": "#f3f0ea",
+                    "surface-variant": "#e5e2db",
+                    "on-primary-fixed-variant": "#00504a",
+                    "secondary-fixed": "#ffdf9b",
+                    "outline": "#6e7977",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#ffe4e4",
+                    "surface-container-high": "#ebe8e1",
+                    "surface-container-low": "#f6f3ec",
+                    "on-surface-variant": "#3e4947",
+                    "on-tertiary-fixed": "#40000c",
+                    "surface-container-highest": "#e5e2db",
+                    "primary-fixed-dim": "#80d5cb",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#a6002f",
+                    "tertiary-fixed": "#ffdada",
+                    "tertiary-fixed-dim": "#ffb3b6",
+                    "on-tertiary-fixed-variant": "#920028",
+                    "on-primary-container": "#a3faef",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#e3c37d",
+                    "on-secondary-fixed": "#251a00",
+                    "secondary-container": "#fddc94",
+                    "primary": "#005c55",
+                    "on-surface": "#1c1c18",
+                    "error": "#ba1a1a",
+                    "primary-container": "#0f766e",
+                    "secondary": "#735b20",
+                    "surface-container": "#f0eee7",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#00201d",
+                    "on-secondary-container": "#785f24",
+                    "inverse-primary": "#80d5cb",
+                    "outline-variant": "#bdc9c6",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface": "#fcf9f2",
+                    "surface-bright": "#fcf9f2",
+                    "on-secondary-fixed-variant": "#594409",
+                    "tertiary-container": "#d2093f",
+                    "background": "#fcf9f2",
+                    "surface-dim": "#dcdad3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "1.5rem",
+                    "container-padding": "2rem",
+                    "stack-sm": "1rem",
+                    "stack-md": "2rem",
+                    "unit": "8px",
+                    "stack-lg": "4rem"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Lexend"
+                    ],
+                    "button": [
+                            "Lexend"
+                    ],
+                    "label-bold": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Lexend"
+                    ],
+                    "headline-xl": [
+                            "Lexend"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "button": [
+                            "16px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Masonry styles */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:flex-row font-body-md">
+<!-- SideNavBar (Mobile: Hidden, Web: Fixed Left) -->
+<nav class="hidden md:flex bg-teal-50 dark:bg-slate-900 text-teal-700 dark:text-teal-400 font-lexend text-sm font-bold text-xl font-black text-teal-800 dark:text-teal-200 rounded-r-[2.5rem] border-r-8 border-teal-100/50 divide-y divide-teal-100 dark:divide-teal-900 shadow-2xl shadow-teal-900/10 fixed left-0 top-0 h-screen w-72 z-40 p-6 flex-col">
+<div class="mb-8 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-md font-headline-md">
+<span class="material-symbols-outlined">emoji_objects</span>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-primary">Bright Academy</h1>
+<p class="font-body-md text-body-md text-primary/70">Nurturing Roots</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95 duration-100 rounded-3xl" href="#">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95 duration-100 rounded-3xl" href="#">
+<span class="material-symbols-outlined">school</span>
+                About Us
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95 duration-100 rounded-3xl" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                Academics
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-teal-700/70 dark:text-teal-400/70 hover:bg-white/50 hover:translate-x-2 transition-transform duration-200 active:scale-95 duration-100 rounded-3xl" href="#">
+<span class="material-symbols-outlined">assignment_ind</span>
+                Admissions
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 bg-teal-600 text-white rounded-3xl shadow-[0_4px_0_rgb(13,92,86)] hover:translate-x-2 transition-transform duration-200 active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+                Gallery
+            </a>
+</div>
+<div class="mt-auto pt-6 border-t border-teal-100 dark:border-teal-900">
+<button class="w-full bg-secondary-container text-on-secondary-container font-button text-button py-3 px-6 rounded-full border-b-2 border-secondary shadow-sm hover:translate-y-0.5 active:scale-95 transition-all">
+                Apply Today
+            </button>
+</div>
+</nav>
+<!-- TopNavBar (Mobile: Top, Web: Hidden) -->
+<nav class="md:hidden sticky top-0 z-50 flex justify-between items-center px-8 py-4 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-teal-700 dark:text-teal-400 font-lexend text-base font-semibold text-2xl font-black text-teal-700 dark:text-teal-400 tracking-tight docked full-width top-0 rounded-b-[2rem] border-b-4 border-teal-50/50 shadow-[0_10px_40px_-15px_rgba(15,118,110,0.2)]">
+<div class="text-primary font-headline-md text-headline-md tracking-tight">HP Bright Academy</div>
+<div class="flex gap-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Campus Life</a>
+<a class="text-teal-700 dark:text-teal-300 border-b-4 border-yellow-400 pb-1 hover:bg-teal-50 dark:hover:bg-teal-900/50 rounded-full px-4 py-2 transition-all duration-300 active:scale-95 active:translate-y-0.5 transition-transform" href="#">Gallery</a>
+</div>
+<button class="bg-primary text-on-primary font-button text-button py-2 px-6 rounded-full hover:bg-primary/90 transition-colors">Inquire Now</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col md:ml-72 min-h-screen">
+<!-- Hero Section -->
+<section class="relative pt-stack-lg pb-stack-md px-container-padding text-center overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-surface-container-low opacity-50"></div>
+<!-- Decorative Elements -->
+<div class="absolute top-10 left-10 w-24 h-24 bg-primary-fixed rounded-full blur-3xl opacity-60"></div>
+<div class="absolute bottom-10 right-10 w-32 h-32 bg-secondary-fixed rounded-full blur-3xl opacity-60"></div>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-sm relative inline-block">
+                Experience Bright Academy
+                <span class="absolute -top-4 -right-8 text-secondary text-4xl material-symbols-outlined fill animate-bounce">stars</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-md">
+                Where curiosity thrives and every corner is a new adventure in learning. Explore our vibrant campus life and state-of-the-art facilities designed for young minds.
+            </p>
+</section>
+<!-- Bento Grid Facilities -->
+<section class="px-container-padding py-stack-md max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-3 mb-stack-sm">
+<span class="material-symbols-outlined text-tertiary text-3xl">account_balance</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Facilities</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter auto-rows-[250px]">
+<!-- Smart Classrooms (Large) -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-[2rem] overflow-hidden group shadow-lg border border-primary-fixed-dim/30 bg-surface">
+<img alt="Smart Classrooms" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A bright, modern primary school classroom with colorful ergonomic furniture and a large interactive smartboard. Sunbeams stream through large windows, illuminating vibrant student artwork on the walls. The scene is cheerful and educational, reflecting a tactile, playful design aesthetic with a color palette of soft teals, yellows, and warm whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TCOgRqfbRBON0QroeOqWJkqANpteemK_uv_BiHiJEwZmdYj1vtyly98zqx34RDWOrnXET9NO9bY6H1oXnJMG2ri2afGfBfDfd4atuTmvaAmWhLxcx955D3vo8S7qRcc3DzRh0d3B6K9AW48U1p4vuVEegBObcT3gz30l7xjBz94nw2_EuQF7zdXUPTJun6zmEljefrSvljU4KmCwiuOyt74Lh_zx7zuHypqeJo3aoxTxRrLT9zSWhvE6by6lamrAUjZQSs43o46Z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-6">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-4 rounded-xl inline-block max-w-max border border-white/20 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined fill text-secondary">computer</span>
+                                Smart Classrooms
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Interactive hubs designed for engaging, tech-enabled learning.</p>
+</div>
+</div>
+</div>
+<!-- Science Labs -->
+<div class="relative rounded-[2rem] overflow-hidden group shadow-lg border border-primary-fixed-dim/30 bg-surface">
+<img alt="Science Labs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, kid-friendly school science laboratory featuring low workbenches equipped with colorful microscopes and safety goggles. The lighting is bright and even, highlighting a large periodic table mural in a playful pastel palette. The mood is inquisitive and safe, aligning with a high-energy academic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLVELrQBh9Y656PoMhe6Wa4kHMQ0J60T2K39IF072CtgnPWs0ZRJGGLFj1T8xuDIT9DqsXiffH0WBavbnLLJWYON_RPcQwjNlAYH7ctKs5ws438M86u_uVdqrWfogPJCcf_PwcqZqwalU18j527nTON3htHG8q4DTgx0X4iQsZpn-bh3wx-0uw39iFqjV62SlYplHZYWLyoyz5MjBOH2lrW7Z98H7OikdPZe59kmL9wJUG7vqj3-Tmac_hrOhp8Sn1kv-aat9T38NH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest drop-shadow-md">Discovery Labs</h3>
+</div>
+</div>
+<!-- Playground -->
+<div class="relative rounded-[2rem] overflow-hidden group shadow-lg border border-primary-fixed-dim/30 bg-surface">
+<img alt="Playground" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vibrant outdoor school playground featuring modern, soft-edged climbing structures in bright yellow and teal. The ground is covered in a soft, bouncy safety surface. The scene is bathed in warm, sunny daylight, conveying a sense of physical playfulness, joy, and boundless energy characteristic of a happy school campus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Y8Kzi6w8MRu9kPktAi-8DUywpfOO6r7ukA-sdytEfPnY0uVvDmNQT5oNLJiu_eb3GqlJLRkg-dMmZSKhJGmleOwQoW9j4VZwb2Ht3dmdsDZq1wjPpxseGM2PAVUtwgzGtOTjYcfTR0GTiLVvdzCPwFI8LnVMUcCOx-cairnBY0pbfcd0NJokyfsG6BhNLdAMePVICJcJNUIGr7110UE_P9oBqnuuyftbnj2iqQZObOIsmsQcN4EAL8pt6Hjj6L9EJ3nwWEbivBm9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex flex-col justify-end p-6">
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest drop-shadow-md">Active Playground</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Masonry Gallery -->
+<section class="px-container-padding py-stack-lg max-w-7xl mx-auto w-full bg-surface-container-low rounded-[3rem] my-stack-md">
+<div class="text-center mb-stack-md">
+<span class="inline-flex items-center justify-center bg-secondary-fixed text-on-secondary-fixed px-4 py-1 rounded-full font-label-bold text-label-bold mb-4">
+<span class="material-symbols-outlined text-sm mr-1">photo_camera</span>
+                    Campus Moments
+                </span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Life at Bright Academy</h2>
+</div>
+<div class="masonry-grid">
+<!-- Gallery Item 1 -->
+<div class="masonry-item relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-4 border-surface-container-lowest">
+<img alt="Students studying" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="A close-up shot of two young diverse students smiling while looking at a colorful illustrated book together in a sunny library corner. Soft, pillowy bean bags provide seating. The lighting is warm and natural. The style reflects a tactile, playful educational aesthetic with soft focus backgrounds and cheerful colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkC-5JVlwofPUX17wIV1n0HkyU_xjfPO9aMkJUfUO71nFFe4kBpJfBRs2PL4wMu9QH3EVoFedJe1S0zC3zBCsnQrtTwcSTuS36LyZwNlxK2IjSK2xWJySbnrpE1kUhZNc8WNSkKuP7qE6p0zHwlvHYu03EgxyU27nVuMZ8NuRlGHiUPnYDBO6SMCIqcPII90A_9WeYSPknwxB4_0INtM6qgVvY3ZllnySgLx3W0-_of7G42ZmfU2qsrgFHh9JaCgenCKMztf-ZC0Oz"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-container-lowest text-primary font-label-bold text-label-bold px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined">favorite</span> Library Time
+                        </span>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="masonry-item relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-4 border-surface-container-lowest">
+<img alt="Art class" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="A top-down view of children's hands painting brightly colored abstract art on large sheets of thick paper. Paintbrushes, vibrant palettes of red, yellow, and teal, and small water cups are scattered playfully. The lighting is bright and shadowless, emphasizing the messy, creative joy of a school art classroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkipQCFKYl1wTtoA0LhaLlUkpFlzHqQcvdICvjDgBxQXw5vYYMKP253pQe3JrGgDXSm3FPJLCR2tDgBiBEOEYfkt_yvmi_z_nOTEKKTqwE8m1FsH-P-OLS7jkuMIq6_ksbIh2puEX1LUlJy0tJ1S_W94mDLQTZLERb7gvtZDsiW4zycj6Vyzn85SqJj1sT49GrLMK1FodI3dR_Y6iVbC6YJSFCBFdL5UwvJQRxSqccQ4p35iZQXm8UlDdg47bgI1sQ7hqx6l03WrRO"/>
+</div>
+<!-- Gallery Item 3 -->
+<div class="masonry-item relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-4 border-surface-container-lowest">
+<img alt="Teacher and student" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="A warm, candid photo of a friendly teacher in a teal sweater helping a young student with a colorful wooden puzzle. They are in a classroom with soft natural light illuminating their faces. The atmosphere is nurturing, supportive, and distinctly academic, characterized by a light mode, high-key visual approach." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-dcCf2lOfMRIQeIDPb9vaY1hC9BkXh7USBIwMGRB7pnvoXsb7Enb9vvM9kOEgDUVehHARWXDPBpw0AZta3AxcDoxWjsKFsNXwMg8wbxxwPLwRH3m-WwpePFFXNNWKBdTm7-QECwMfjIJu4lnrUQ1hsJwxCgOIC0lYxUet02VXD1Ndu_L76HuC2U526r2guleDpwiPxSAvruEqCt7pKE97M6c9LSy6VlWQQ5ospuKS7AnzTRrEiZvxq3tzs8BDlUJnG5O27rMg3FEM"/>
+</div>
+<!-- Gallery Item 4 -->
+<div class="masonry-item relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-4 border-surface-container-lowest">
+<img alt="Kids doing yoga" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="A group of young children attempting yoga poses on bright pastel mats in a spacious, light-filled gymnasium. Their expressions are focused yet joyful. The scene utilizes a vibrant color palette of mint greens and sky blues, creating an energetic and healthy visual narrative within a modern school environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIatJVbbx5btwPW9-ZVQobTZf_cX_sda8j9qEvfvqNBZQc6yijJuinIsZDnRKcCpnAZ3_RLEhEDpAfpJ0x-eyhTcZ-WLv_Qh1eNlbXNzMjVFd0ywbXTQi1uVe01mC7QWdtpXOCalymEFKbc6hGR6vuWNFWKzClr_D0qSNgFIS4azFbUcHnmRvhS8i7IIxeHFc2uSoZkAOe0N1weIBhB2h4G-xyWTz7S5pOdMM83O3n8G3wX36ZTzkevaAIfEyiTxMMaLgu3SqFUHZn"/>
+</div>
+<!-- Gallery Item 5 -->
+<div class="masonry-item relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-4 border-surface-container-lowest">
+<img alt="Reading corner" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105" data-alt="A cozy, whimsical reading corner in a school library featuring a large, soft, tree-shaped bookshelf filled with colorful children's books. A plush, circular mint-green rug anchors the space. The lighting is soft and inviting, reflecting a tactile playfulness designed to encourage young learners to explore literature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdVc8WTTtGiIYYmuBExanp4Cp6jm-j45UpzQqa__iDC2mqMdqrdac9wgcx1mLFsdyl8kzLCqq58LIipJp1GlAEwvFpgsXc63G6KKMaWONDYHEvHITRUZ6DWQvseDyiA8B9JMyGIpusN0IgtOIDU3DzViUO15oGYlZZZ7brfbYKkA2uubnkoxpvX-pQ-6m51EbIl_H_XP1K-Y9b3yDdzJ8rplcYUR2tt5LnoAI5N4qLZUVAfh_ZKRwJQbOX5GYZgXkAW669PDoHpkBe"/>
+</div>
+</div>
+<div class="text-center mt-stack-md">
+<button class="bg-surface-container-lowest text-primary border-2 border-primary-fixed-dim font-button text-button py-3 px-8 rounded-full hover:bg-primary-fixed/20 active:scale-95 transition-all shadow-[0_4px_15px_-3px_rgba(0,92,85,0.2)]">
+                    Load More Moments
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-teal-900 dark:bg-black text-teal-400 font-lexend text-sm rounded-t-[4rem] mt-16 border-t-2 border-teal-800 w-full py-16 px-12 flex flex-col md:flex-row justify-between items-center gap-8 mt-auto">
+<div class="text-xl font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined">emoji_objects</span>
+                HP Bright Academy
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Privacy Policy</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Staff Portal</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Terms of Service</a>
+<a class="text-teal-200/60 hover:text-yellow-400 transition-colors hover:-translate-y-1 transition-transform" href="#">Contact Us</a>
+</div>
+<div class="text-teal-200/60 text-center md:text-right">
+                © 2024 HP Bright Academy. Where curiosity meets excellence.
+            </div>
+</footer>
+</main>
+</body></html>

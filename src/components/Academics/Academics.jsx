@@ -1,224 +1,150 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaBaby, FaBookOpen, FaCalendarAlt, FaChevronDown, FaChevronUp, FaChild, FaFlask, FaLaptopCode, FaPalette, FaUserGraduate, FaUsers } from 'react-icons/fa';
-import PageHero from '../shared/PageHero';
-import SectionHeading from '../shared/SectionHeading';
-
-const academicLevels = [
-  {
-    icon: FaBaby,
-    title: 'Preschool Program',
-    age: 'Ages 3-5',
-    description: 'Young learners build school readiness through routine, play, storytelling, movement, and social confidence.',
-    curriculum: ['Language and communication', 'Basic numeracy concepts', 'Creative expression', 'Social and emotional development'],
-    methodology: ['Play-based learning', 'Guided exploration', 'Sensory activities', 'Individual attention'],
-    outcomes: ['Comfort with school routines', 'Early literacy habits', 'Confidence in expression', 'Improved motor and social skills'],
-  },
-  {
-    icon: FaChild,
-    title: 'Primary Section',
-    age: 'Classes 1-5',
-    description: 'Students develop dependable fundamentals in language, mathematics, awareness, and classroom participation.',
-    curriculum: ['English and Hindi', 'Mathematics', 'Environmental studies', 'Art, music, and physical education'],
-    methodology: ['Activity-based teaching', 'Repetition with practice', 'Interactive classroom sessions', 'Project work'],
-    outcomes: ['Stronger reading and writing', 'Numeracy fluency', 'Creative participation', 'Confidence in class engagement'],
-  },
-  {
-    icon: FaUserGraduate,
-    title: 'Middle School',
-    age: 'Classes 6-8',
-    description: 'Older students move into deeper subject learning, stronger analysis, and better preparation for the next academic stage.',
-    curriculum: ['English, Hindi, Maths', 'Science', 'Social studies', 'Computer applications and co-curricular learning'],
-    methodology: ['Concept clarity', 'Discussion and presentation', 'Practical assignments', 'Assessment-based reinforcement'],
-    outcomes: ['Subject depth', 'Improved problem solving', 'Higher accountability', 'Readiness for secondary education'],
-  },
-];
-
-const teachingMethods = [
-  {
-    title: 'Interactive classroom teaching',
-    description: 'Lessons are designed to keep students involved rather than passively listening through the day.',
-    icon: FaUsers,
-  },
-  {
-    title: 'Technology and visual support',
-    description: 'Digital tools and smart-class methods are used to make learning easier to absorb and recall.',
-    icon: FaLaptopCode,
-  },
-  {
-    title: 'Hands-on academic reinforcement',
-    description: 'Projects, demonstrations, and activity-based work help students connect theory to application.',
-    icon: FaFlask,
-  },
-  {
-    title: 'Creative and expressive development',
-    description: 'Art, activity, performance, and co-curricular work help build confidence beyond exams.',
-    icon: FaPalette,
-  },
-];
-
-const timeline = [
-  { title: 'First Term', detail: 'April to September' },
-  { title: 'Second Term', detail: 'October to March' },
-  { title: 'Annual Examinations', detail: 'February to March' },
-];
+import React from 'react';
 
 const Academics = () => {
-  const [expandedLevel, setExpandedLevel] = useState(0);
-
-  const toggleLevel = (levelIndex) => {
-    setExpandedLevel(expandedLevel === levelIndex ? null : levelIndex);
-  };
-
   return (
-    <div className="min-h-screen">
-      <PageHero
-        eyebrow="Academic design"
-        title="Clear fundamentals first, then"
-        highlight="confidence, depth, and readiness."
-        description="The school’s academic structure is designed to feel age-appropriate at every level. Students are not rushed too early, but they are steadily prepared for stronger work as they progress."
-        image={`${import.meta.env.BASE_URL}images/Activities/5.jpg`}
-        imageAlt="Academic learning at H.P. Bright Academy"
-        stats={[
-          { value: '3', label: 'learning stages' },
-          { value: '9+', label: 'core subject areas' },
-          { value: '1', label: 'continuous progress system' },
-        ]}
-      />
-
-      <section className="section-shell section-padding">
-        <div className="container-custom">
-          <SectionHeading
-            eyebrow="Programs"
-            title="Each stage is designed for"
-            highlight="how children actually grow."
-            description="The curriculum becomes more demanding over time, but it remains structured around pace, understanding, and long-term confidence."
-            align="center"
+    <div className="w-full max-w-7xl mx-auto px-container-padding py-stack-md gap-stack-lg flex-grow flex flex-col">
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center gap-gutter pt-stack-sm">
+        <div className="flex-1 space-y-stack-sm">
+          <div className="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-bold text-label-bold">
+            <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>explore</span>
+            Learning Journey
+          </div>
+          <h1 className="font-headline-xl text-headline-xl text-primary mb-4">Discover the Joy of Learning</h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Our curriculum is designed to spark boundless curiosity. From playful early years to foundational primary and exploratory middle school, we nurture bright minds every step of the way.
+          </p>
+        </div>
+        <div className="flex-1 relative mt-8 md:mt-0">
+          <div className="absolute inset-0 bg-primary-fixed rounded-[3rem] rotate-3 scale-105 opacity-50 blur-xl"></div>
+          <img 
+            alt="Students learning together" 
+            className="relative w-full h-[400px] object-cover rounded-[3rem] border-4 border-surface-container-lowest shadow-[0_20px_60px_rgba(0,92,85,0.15)]" 
+            src={import.meta.env.BASE_URL + "images/Activities/5.jpg"}
           />
+        </div>
+      </section>
 
-          <div className="mt-12 space-y-5">
-            {academicLevels.map((level, index) => (
-              <motion.article
-                key={level.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: index * 0.08 }}
-                viewport={{ once: true, amount: 0.2 }}
-                className="soft-card overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleLevel(index)}
-                  className="flex w-full items-center justify-between gap-5 px-6 py-6 text-left lg:px-8"
-                >
-                  <div className="flex items-start gap-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-[1.3rem] bg-slate-900 text-white">
-                      <level.icon />
-                    </div>
-                    <div>
-                      <div className="label-chip">{level.age}</div>
-                      <h3 className="mt-4 text-2xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                        {level.title}
-                      </h3>
-                      <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600">{level.description}</p>
-                    </div>
-                  </div>
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-700">
-                    {expandedLevel === index ? <FaChevronUp /> : <FaChevronDown />}
-                  </div>
-                </button>
-
-                {expandedLevel === index ? (
-                  <div className="border-t border-slate-200 bg-slate-50/70 px-6 py-6 lg:px-8">
-                    <div className="grid gap-8 lg:grid-cols-3">
-                      <div>
-                        <h4 className="text-lg text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Curriculum</h4>
-                        <div className="mt-4 space-y-3">
-                          {level.curriculum.map((item) => (
-                            <div key={item} className="flex items-start gap-3 text-sm text-slate-700">
-                              <div className="mt-2 h-1.5 w-1.5 rounded-full bg-primary-700" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-lg text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Methodology</h4>
-                        <div className="mt-4 space-y-3">
-                          {level.methodology.map((item) => (
-                            <div key={item} className="flex items-start gap-3 text-sm text-slate-700">
-                              <div className="mt-2 h-1.5 w-1.5 rounded-full bg-teal-700" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-lg text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>Outcomes</h4>
-                        <div className="mt-4 space-y-3">
-                          {level.outcomes.map((item) => (
-                            <div key={item} className="flex items-start gap-3 text-sm text-slate-700">
-                              <div className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--gold-500)]" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-              </motion.article>
-            ))}
+      {/* Preschool Section */}
+      <section className="space-y-stack-md relative mt-32">
+        <div className="absolute -left-10 top-10 w-32 h-32 bg-secondary-fixed rounded-full blur-3xl opacity-40 -z-10"></div>
+        <div className="text-center space-y-4 max-w-2xl mx-auto mb-12">
+          <h2 className="font-headline-lg text-headline-lg text-primary">Preschool (Early Years)</h2>
+          <p className="text-on-surface-variant font-body-md">A magical environment where learning feels like play, focusing on emotional, social, and physical development.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          {/* Card 1 */}
+          <div className="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+            <div className="w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shadow-inner mb-2">
+              <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>extension</span>
+            </div>
+            <h3 className="font-headline-md text-headline-md text-on-surface">Play-Based Discovery</h3>
+            <p className="text-on-surface-variant">Hands-on activities that build cognitive skills and encourage natural curiosity.</p>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+            <div className="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-inner mb-2">
+              <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>diversity_3</span>
+            </div>
+            <h3 className="font-headline-md text-headline-md text-on-surface">Social Growth</h3>
+            <p className="text-on-surface-variant">Learning to share, communicate, and build meaningful friendships in a safe space.</p>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant shadow-[0_8px_30px_rgba(0,106,99,0.06)] hover:-translate-y-1 transition-transform flex flex-col items-start gap-4">
+            <div className="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-inner mb-2">
+              <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>palette</span>
+            </div>
+            <h3 className="font-headline-md text-headline-md text-on-surface">Creative Expression</h3>
+            <p className="text-on-surface-variant">Art, music, and movement to help tiny hands and minds express big ideas.</p>
           </div>
         </div>
       </section>
 
-      <section className="section-shell section-padding bg-white/60">
-        <div className="container-custom grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
-          <div>
-            <SectionHeading
-              eyebrow="How learning works"
-              title="Teaching is strongest when"
-              highlight="clarity and engagement meet."
-              description="The school uses a mix of focused classroom instruction, practical reinforcement, and co-curricular participation to make learning stick."
-            />
-            <div className="mt-8 space-y-4">
-              {teachingMethods.map((method, index) => (
-                <motion.div
-                  key={method.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  className="soft-card flex items-start gap-4 p-5"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                    <method.icon />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>{method.title}</h3>
-                    <p className="mt-2 text-sm leading-7 text-slate-600">{method.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+      {/* Primary School (Bento Grid) */}
+      <section className="space-y-stack-md bg-surface-container-low p-8 md:p-12 rounded-[3rem] shadow-[inset_0_4px_20px_rgba(0,0,0,0.02)] border border-white mt-32">
+        <div className="flex justify-between items-end mb-10">
+          <div className="space-y-2">
+            <h2 className="font-headline-lg text-headline-lg text-primary">Primary School</h2>
+            <p className="text-on-surface-variant font-label-bold text-label-bold uppercase tracking-wider">Classes 1 to 5</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter min-h-[500px]">
+          {/* Large Feature Cell */}
+          <div className="md:col-span-2 md:row-span-2 bg-primary text-on-primary rounded-[2rem] p-8 flex flex-col justify-between shadow-[0_12px_40px_rgba(0,92,85,0.3)] relative overflow-hidden group">
+            <div className="absolute -right-10 -top-10 w-64 h-64 bg-primary-container rounded-full blur-3xl opacity-50"></div>
+            <div className="relative z-10 space-y-4">
+              <span className="material-symbols-outlined text-5xl text-secondary-fixed mb-4 block" style={{ fontVariationSettings: "'FILL' 1" }}>calculate</span>
+              <h3 className="font-headline-lg text-headline-lg">Core Foundation</h3>
+              <p className="text-primary-fixed-dim max-w-sm mt-2 font-body-md">Building strong roots in Mathematics and Language Arts through interactive, real-world problem solving.</p>
+            </div>
+            <div className="relative z-10 mt-8 flex flex-wrap gap-2">
+              <span className="bg-on-primary/10 text-on-primary px-4 py-2 rounded-full font-label-bold text-label-bold backdrop-blur-sm">Mathematics</span>
+              <span className="bg-on-primary/10 text-on-primary px-4 py-2 rounded-full font-label-bold text-label-bold backdrop-blur-sm">Reading & Writing</span>
             </div>
           </div>
+          {/* Small Cell 1 */}
+          <div className="md:col-span-2 bg-surface-container-lowest rounded-[2rem] p-6 border border-outline-variant flex items-center gap-6 shadow-sm hover:bg-surface transition-colors">
+            <div className="w-16 h-16 rounded-[1rem] bg-secondary-container flex items-center justify-center shrink-0">
+              <span className="material-symbols-outlined text-3xl text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>biotech</span>
+            </div>
+            <div>
+              <h4 className="font-headline-md text-headline-md text-on-surface mb-1">General Science</h4>
+              <p className="text-on-surface-variant text-sm font-body-md">Exploring nature and basic physics through fun experiments.</p>
+            </div>
+          </div>
+          {/* Small Cell 2 */}
+          <div className="bg-tertiary-fixed rounded-[2rem] p-6 flex flex-col justify-between shadow-sm min-h-[200px]">
+            <span className="material-symbols-outlined text-4xl text-tertiary" style={{ fontVariationSettings: "'FILL' 1" }}>public</span>
+            <h4 className="font-headline-md text-headline-md text-black mt-4">Social Studies</h4>
+          </div>
+          {/* Small Cell 3 */}
+          <div className="bg-surface-container-lowest border border-outline-variant rounded-[2rem] p-6 flex flex-col justify-between shadow-sm min-h-[200px]">
+            <span className="material-symbols-outlined text-4xl text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>sports_basketball</span>
+            <h4 className="font-headline-md text-headline-md text-on-surface mt-4">Physical Ed.</h4>
+          </div>
+        </div>
+      </section>
 
-          <div className="soft-card p-8">
-            <span className="eyebrow">Academic rhythm</span>
-            <h3 className="mt-4 font-display text-4xl leading-none text-slate-900">
-              Progress is tracked continuously, not left to a single high-pressure moment.
-            </h3>
-            <p className="mt-5 text-body">
-              Teachers use regular classroom work, assignments, observation, and parent communication to keep learning visible. The goal is better understanding and better habits, not just better marks.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {timeline.map((item) => (
-                <div key={item.title} className="rounded-[1.4rem] border border-slate-200 bg-slate-50 p-5">
-                  <FaCalendarAlt className="text-teal-700" />
-                  <h4 className="mt-4 text-lg text-slate-900" style={{ fontFamily: "'Oswald', sans-serif" }}>{item.title}</h4>
-                  <p className="mt-2 text-sm text-slate-600">{item.detail}</p>
+      {/* Middle School Section */}
+      <section className="space-y-stack-md py-stack-sm mt-32 mb-32">
+        <div className="text-center space-y-4 max-w-2xl mx-auto mb-12">
+          <h2 className="font-headline-lg text-headline-lg text-primary">Middle School (Classes 6-8)</h2>
+          <p className="text-on-surface-variant font-body-md">Fostering independence, critical thinking, and advanced technological literacy to prepare students for the future.</p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-gutter">
+          <div className="flex-1 bg-surface-container-lowest p-8 md:p-12 rounded-[2.5rem] border border-outline-variant shadow-lg relative overflow-hidden">
+            <div className="absolute right-0 bottom-0 w-40 h-40 bg-surface-container rounded-tl-full -z-10"></div>
+            <div className="space-y-8">
+              <div className="flex items-center gap-4">
+                <div className="p-4 bg-primary-fixed rounded-2xl">
+                  <span className="material-symbols-outlined text-on-primary-fixed-variant text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>computer</span>
                 </div>
-              ))}
+                <h3 className="font-headline-md text-headline-md text-on-surface">Advanced Academics</h3>
+              </div>
+              <ul className="space-y-5">
+                <li className="flex items-start gap-4">
+                  <span className="material-symbols-outlined text-primary text-2xl mt-0.5">check_circle</span>
+                  <span className="text-on-surface-variant font-body-md">Introduction to Computer Science & Coding</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="material-symbols-outlined text-primary text-2xl mt-0.5">check_circle</span>
+                  <span className="text-on-surface-variant font-body-md">Applied Mathematics and Algebra basics</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="material-symbols-outlined text-primary text-2xl mt-0.5">check_circle</span>
+                  <span className="text-on-surface-variant font-body-md">Laboratory Sciences (Physics, Chemistry, Bio)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex-1 bg-secondary-fixed p-8 md:p-12 rounded-[2.5rem] shadow-[0_10px_30px_rgba(255,223,155,0.4)] relative overflow-hidden flex flex-col justify-center mt-8 md:mt-0">
+            <div className="absolute -left-10 -top-10 w-32 h-32 bg-white rounded-full opacity-30 blur-2xl -z-10"></div>
+            <h3 className="font-headline-lg text-headline-lg text-on-secondary-fixed mb-6">Clubs & Electives</h3>
+            <p className="text-on-secondary-fixed-variant mb-8 font-body-md">Students can choose from Robotics, Debate Team, Advanced Art, and Drama to discover their unique passions.</p>
+            <div className="flex flex-wrap gap-3">
+              <span className="bg-white/60 px-5 py-2.5 rounded-full font-label-bold text-on-secondary-fixed-variant shadow-sm border border-white/40">Robotics</span>
+              <span className="bg-white/60 px-5 py-2.5 rounded-full font-label-bold text-on-secondary-fixed-variant shadow-sm border border-white/40">Debate</span>
+              <span className="bg-white/60 px-5 py-2.5 rounded-full font-label-bold text-on-secondary-fixed-variant shadow-sm border border-white/40">Drama</span>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Academics from './components/Academics/Academics';
 import Admissions from './components/Admissions/Admissions';
 import Contact from './components/Contact/Contact';
+import EnhancedGallery from './components/EnhancedGallery/EnhancedGallery';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import AdmissionModal from './components/AdmissionModal/AdmissionModal';
 import './App.css';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/admissions" element={<Admissions />} />
+            <Route path="/gallery" element={<EnhancedGallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
